@@ -8,14 +8,25 @@ services:
       - "3000:3000"
     environment:
       NODE_ENV: production
-    links:
-      - back-end
+    networks:
+      my-network:
+        aliases:
+          - client
   back-end:
     container_name: app
     restart: always
     build: ./back-end
     ports:
       - "5050:5050"
+    networks:
+      my-network:
+        aliases:
+          - app
+networks:
+  my-network:
+    driver: bridge
+
+
   #   depends_on:
   #     - mongo
   # mongo:
