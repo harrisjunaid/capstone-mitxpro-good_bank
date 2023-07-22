@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  tslib:
+    image: tslib
+    build:
+      context: server/node_modules/tslib
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 5050:5050
+      - "27017:27017"
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "tslib.js"]

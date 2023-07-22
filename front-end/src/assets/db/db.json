@@ -1,0 +1,26 @@
+[
+	{
+		"name": "harris",
+		"email": "harris@email.com",
+		"password": "password",
+		"balance": 20
+	},
+	{
+		"name": "sunil",
+		"email": "sunil@email.com",
+		"password": "password",
+		"balance": 30
+	},
+	{
+		"name": "john",
+		"email": "john@email.com",
+		"password": "password",
+		"balance": 40
+	},
+	{
+		"name": "smith",
+		"email": "smith@email.com",
+		"password": "password",
+		"balance": 45
+	}
+]

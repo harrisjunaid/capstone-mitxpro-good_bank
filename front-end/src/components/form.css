@@ -1,0 +1,11 @@
+  /*FORM ICONS*/
+  .inputForm {
+    position: realtive;  
+  }
+
+  .icon {
+    color: rgb(218,165,32);
+    position: absolute;
+    top: calc(35%);
+    left: -1.5rem;
+  }

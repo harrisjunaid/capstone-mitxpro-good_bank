@@ -1,0 +1,46 @@
+[
+	{
+		"id": 1,
+		"name": "harris",
+		"email": "harris@email.com",
+		"password": "password",
+		"transactions": [
+				{"deposit":[{"d-id": 1,"amount": 100,"time": "Sat, 13 Apr 2023 18:03:16 GMT"}]},
+				{"withdraw":[{"w-id":1,"amount": -50,"time": "Sat, 14 Apr 2023 18:03:16 GMT"},{"w-id":2,"amount": -30,"time": "Sat, 15 Apr 2023 18:03:16 GMT"}]}
+		],
+		"balance": 20
+	},
+	{
+		"id": 2,
+		"name": "sunil",
+		"email": "sunil@email.com",
+		"password": "password",
+		"transactions": [
+			{"deposit":[{"d-id": 1,"amount": 100,"time": "Sat, 13 Apr 2023 18:03:16 GMT"}]},
+			{"withdraw":[{"w-id":1,"amount": -50,"time": "Sat, 14 Apr 2023 18:03:16 GMT"},{"w-id":2,"amount": -20,"time": "Sat, 15 Apr 2023 18:03:16 GMT"}]}
+		],
+		"balance": 30
+	},
+	{
+		"id": 3,
+		"name": "john",
+		"email": "john@email.com",
+		"password": "password",
+		"transactions": [
+			{"deposit":[{"d-id": 1,"amount": 100,"time": "Sat, 13 Apr 2023 18:03:16 GMT"}]},
+			{"withdraw":[{"w-id":1,"amount": -50,"time": "Sat, 14 Apr 2023 18:03:16 GMT"},{"w-id":2,"amount": -10,"time": "Sat, 15 Apr 2023 18:03:16 GMT"}]}
+		],
+		"balance": 40
+	},
+	{
+		"id": 4,
+		"name": "smith",
+		"email": "smith@email.com",
+		"password": "password",
+		"transactions": [
+			{"deposit":[{"d-id": 1,"amount": 100,"time": "Sat, 13 Apr 2023 18:03:16 GMT"}]},
+			{"withdraw":[{"w-id":1,"amount": -50,"time": "Sat, 14 Apr 2023 18:03:16 GMT"},{"w-id":2,"amount": -5,"time": "Sat, 15 Apr 2023 18:03:16 GMT"}]}
+		],
+		"balance": 45
+	}
+]

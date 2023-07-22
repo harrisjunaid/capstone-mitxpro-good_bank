@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  capstone_server_1:
+    image: goodbank_server
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 5050:5050

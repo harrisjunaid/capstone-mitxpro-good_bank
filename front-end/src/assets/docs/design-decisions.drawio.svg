@@ -1,0 +1,810 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="3272px" height="1342px" viewBox="-0.5 -0.5 3272 1342" content="&lt;mxfile&gt;&lt;diagram id=&quot;tzTH7_Fm_MUOzNQK4r9C&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);">
+    <defs/>
+    <g>
+        <rect x="1" y="1" width="3270" height="1340" fill="#b3b3b3" stroke="#36393d" stroke-width="2" pointer-events="all"/>
+        <path d="M 131 44 L 131 21 L 3261 21 L 3261 44" fill="#f8cecc" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 131 44 L 131 1311 L 3261 1311 L 3261 44" fill="#b3b3b3" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 131 44 L 3261 44" fill="none" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 3128px; height: 1px; padding-top: 33px; margin-left: 132px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                GOOD BANK COMPONENT TREE DIAGRAM
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1696" y="41" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle" font-weight="bold">
+                    GOOD BANK COMPONENT TREE DIAGRAM
+                </text>
+            </switch>
+        </g>
+        <rect x="1911" y="331" width="520" height="170" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 416px; margin-left: 1913px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                <font style="font-size: 28px;">
+                                    Context proider &lt;BankProvider /&gt; wraps
+                                    <br style="font-size: 28px;"/>
+                                    &lt;App /&gt; in index.js.
+                                    <br style="font-size: 28px;"/>
+                                    <br style="font-size: 28px;"/>
+                                    <div style="color: rgb(255, 255, 255); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; line-height: 19px;">
+                                        <div style="font-size: 28px;">
+                                            <span style="color: rgb(128, 128, 128); font-size: 28px;">
+                                                &lt;
+                                            </span>
+                                            <span style="color: rgb(78, 201, 176); font-size: 28px;">
+                                                BankProvider
+                                            </span>
+                                            <span style="color: rgb(128, 128, 128); font-size: 28px;">
+                                                &gt;
+                                            </span>
+                                        </div>
+                                        <div style="font-size: 28px;">
+                                            <span style="color: rgb(128, 128, 128); font-size: 28px;">
+                                                &lt;
+                                            </span>
+                                            <span style="color: rgb(78, 201, 176); font-size: 28px;">
+                                                App
+                                            </span>
+                                            <span style="color: rgb(128, 128, 128); font-size: 28px;">
+                                                /&gt;
+                                            </span>
+                                        </div>
+                                        <div style="font-size: 28px;">
+                                            <span style="color: rgb(128, 128, 128); font-size: 28px;">
+                                                &lt;/
+                                            </span>
+                                            <span style="color: rgb(78, 201, 176); font-size: 28px;">
+                                                BankProvider
+                                            </span>
+                                            <span style="color: rgb(128, 128, 128); font-size: 28px;">
+                                                &gt;
+                                            </span>
+                                        </div>
+                                    </div>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1913" y="424" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px">
+                    Context proider &lt;BankProvider /&gt; wrap...
+                </text>
+            </switch>
+        </g>
+        <rect x="936" y="1011" width="570" height="250" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 572px; height: 250px; padding-top: 1011px; margin-left: 936px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 570px; height: 250px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: normal; overflow-wrap: normal;">
+                                <table style="width: 100%; height: 100%; border-collapse: collapse; font-size: 28px;" cellpadding="4" height="100%" width="100%" border="1">
+                                    <tbody style="font-size: 28px;">
+                                        <tr style="font-size: 28px;">
+                                            <th style="font-size: 28px;" align="center">
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                                        <span style="border-color: var(--border-color); font-size: 28px;">
+                                                            &lt;
+                                                        </span>
+                                                    </font>
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                                        InputForm
+                                                    </span>
+                                                </b>
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                                        /&gt;
+                                                    </span>
+                                                </b>
+                                            </th>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;">
+                                                props:
+                                                <br style="font-size: 28px;"/>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        dbApp: copy of db
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        onRegisterCustomer: update dbApp
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        setLoggedIn: login flag
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;" align="center">
+                                                <br style="font-size: 28px;"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="936" y="1039" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px">
+                    &lt;InputForm /&gt;props:...
+                </text>
+            </switch>
+        </g>
+        <rect x="201" y="621" width="240" height="40" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 238px; height: 1px; padding-top: 641px; margin-left: 202px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div style="color: rgb(255, 255, 255); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; line-height: 19px;">
+                                    <b style="border-color: var(--border-color); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 28px;">
+                                        <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                            <span style="border-color: var(--border-color); font-size: 28px;">
+                                                &lt;
+                                            </span>
+                                        </font>
+                                        <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                            LandingPage
+                                        </span>
+                                        <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                            /&gt;
+                                        </span>
+                                    </b>
+                                    <br style="font-size: 28px;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="321" y="649" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle">
+                    &lt;LandingPage /&gt;
+                </text>
+            </switch>
+        </g>
+        <rect x="141" y="741" width="150" height="40" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 761px; margin-left: 142px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div style="color: rgb(255, 255, 255); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; line-height: 19px;">
+                                    <b style="border-color: var(--border-color); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 28px;">
+                                        <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                            <span style="border-color: var(--border-color); font-size: 28px;">
+                                                &lt;
+                                            </span>
+                                        </font>
+                                        <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                            Login
+                                        </span>
+                                        <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                            /&gt;
+                                        </span>
+                                    </b>
+                                    <br style="font-size: 28px;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="216" y="769" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle">
+                    &lt;Login /&gt;
+                </text>
+            </switch>
+        </g>
+        <rect x="331" y="741" width="170" height="40" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 168px; height: 1px; padding-top: 761px; margin-left: 332px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div style="color: rgb(255, 255, 255); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; line-height: 19px;">
+                                    <b style="border-color: var(--border-color); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 28px;">
+                                        <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                            <span style="border-color: var(--border-color); font-size: 28px;">
+                                                &lt;
+                                            </span>
+                                        </font>
+                                        <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                            Login
+                                        </span>
+                                        <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                            /&gt;
+                                        </span>
+                                    </b>
+                                    <br style="font-size: 28px;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="416" y="769" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle">
+                    &lt;Login /&gt;
+                </text>
+            </switch>
+        </g>
+        <path d="M 321 661 L 321 691.14 Q 321 701.14 331 701.14 L 406 701.14 Q 416 701.14 416 711.14 L 416 734.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 416 739.88 L 412.5 732.88 L 416 734.63 L 419.5 732.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 321 661 L 321 691.14 Q 321 701.14 311 701.14 L 226 701.14 Q 216 701.14 216 711.14 L 216 734.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 216 739.88 L 212.5 732.88 L 216 734.63 L 219.5 732.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="681" y="621" width="230" height="40" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 228px; height: 1px; padding-top: 641px; margin-left: 682px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; line-height: 19px;"></div>
+                                <b style="font-size: 28px;">
+                                    <font color="#808080" face="Consolas, Courier New, monospace" style="font-size: 28px;">
+                                        <span style="font-size: 28px;">
+                                            &lt;
+                                        </span>
+                                    </font>
+                                    <span style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                        WelcomePage
+                                    </span>
+                                    <span style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                        /&gt;
+                                    </span>
+                                </b>
+                                <font style="font-size: 28px;" color="#808080" face="Consolas, Courier New, monospace">
+                                    <span style="font-size: 28px; background-color: rgb(0, 0, 0);">
+                                        <br style="font-size: 28px;"/>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="796" y="649" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle">
+                    &lt;WelcomePage /&gt;
+                </text>
+            </switch>
+        </g>
+        <rect x="491" y="621" width="160" height="40" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 641px; margin-left: 492px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div style="color: rgb(255, 255, 255); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; line-height: 19px;">
+                                    <b style="border-color: var(--border-color); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 28px;">
+                                        <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                            <span style="border-color: var(--border-color); font-size: 28px;">
+                                                &lt;
+                                            </span>
+                                        </font>
+                                        <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                            NavBar
+                                        </span>
+                                        <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                            /&gt;
+                                        </span>
+                                    </b>
+                                    <br style="font-size: 28px;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="571" y="649" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle">
+                    &lt;NavBar /&gt;
+                </text>
+            </switch>
+        </g>
+        <path d="M 1221 981 L 1221 1004.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1221 1009.88 L 1217.5 1002.88 L 1221 1004.63 L 1224.5 1002.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="941" y="621" width="560" height="360" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 562px; height: 360px; padding-top: 621px; margin-left: 941px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 560px; height: 360px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: normal; overflow-wrap: normal;">
+                                <table style="width: 100%; height: 100%; border-collapse: collapse; font-size: 28px;" cellpadding="4" height="100%" width="100%" border="1">
+                                    <tbody style="font-size: 28px;">
+                                        <tr style="font-size: 28px;">
+                                            <th style="font-size: 28px;" align="center">
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                                        <span style="border-color: var(--border-color); font-size: 28px;">
+                                                            &lt;
+                                                        </span>
+                                                    </font>
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                                        CreateAccountPage
+                                                    </span>
+                                                </b>
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                                        /&gt;
+                                                    </span>
+                                                </b>
+                                            </th>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;">
+                                                context:
+                                                <br style="font-size: 28px;"/>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        dbApp: copy of db
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        setDBapp: db state setter
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        setLoggedIn: login flag
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;" align="center">
+                                                onRegisterCustomer: passed as callback to &lt;inputForm /&gt; for acquiring new customer data
+                                                <br style="font-size: 28px;"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="941" y="649" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px">
+                    &lt;CreateAccountPage /&gt;context:...
+                </text>
+            </switch>
+        </g>
+        <rect x="1531" y="621" width="485" height="330" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 487px; height: 330px; padding-top: 621px; margin-left: 1531px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 485px; height: 330px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: normal; overflow-wrap: normal;">
+                                <table style="width: 100%; height: 100%; border-collapse: collapse; font-size: 28px;" cellpadding="4" height="100%" width="100%" border="1">
+                                    <tbody style="font-size: 28px;">
+                                        <tr style="font-size: 28px;">
+                                            <th style="font-size: 28px;" align="center">
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                                        <span style="border-color: var(--border-color); font-size: 28px;">
+                                                            &lt;
+                                                        </span>
+                                                    </font>
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                                        DepositPage
+                                                    </span>
+                                                </b>
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                                        /&gt;
+                                                    </span>
+                                                </b>
+                                            </th>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;">
+                                                context:
+                                                <br style="font-size: 28px;"/>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        user: active user
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        dbApp: copy of db
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        setDBapp: db state setter
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        setLoggedIn: login flag
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;" align="center">
+                                                <br style="font-size: 28px;"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1531" y="649" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px">
+                    &lt;DepositPage /&gt;context:...
+                </text>
+            </switch>
+        </g>
+        <rect x="2036" y="621" width="475" height="330" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 477px; height: 330px; padding-top: 621px; margin-left: 2036px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 475px; height: 330px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: normal; overflow-wrap: normal;">
+                                <table style="width: 100%; height: 100%; border-collapse: collapse; font-size: 28px;" cellpadding="4" height="100%" width="100%" border="1">
+                                    <tbody style="font-size: 28px;">
+                                        <tr style="font-size: 28px;">
+                                            <th style="font-size: 28px;" align="center">
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                                        <span style="border-color: var(--border-color); font-size: 28px;">
+                                                            &lt;
+                                                        </span>
+                                                    </font>
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                                        WithdrawPage
+                                                    </span>
+                                                </b>
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                                        /&gt;
+                                                    </span>
+                                                </b>
+                                            </th>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;">
+                                                context:
+                                                <br style="font-size: 28px;"/>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        user: active user
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        dbApp: copy of db
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        setDBapp: db state setter
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        setLoggedIn: login flag
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;" align="center">
+                                                <br style="font-size: 28px;"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="2036" y="649" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px">
+                    &lt;WithdrawPage /&gt;context:...
+                </text>
+            </switch>
+        </g>
+        <rect x="2531" y="621" width="415" height="330" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 417px; height: 330px; padding-top: 621px; margin-left: 2531px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 415px; height: 330px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: normal; overflow-wrap: normal;">
+                                <table style="width: 100%; height: 100%; border-collapse: collapse; font-size: 28px;" cellpadding="4" height="100%" width="100%" border="1">
+                                    <tbody style="font-size: 28px;">
+                                        <tr style="font-size: 28px;">
+                                            <th style="font-size: 28px;" align="center">
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                                        <span style="border-color: var(--border-color); font-size: 28px;">
+                                                            &lt;
+                                                        </span>
+                                                    </font>
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                                        AllDataPage
+                                                    </span>
+                                                </b>
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                                        /&gt;
+                                                    </span>
+                                                </b>
+                                            </th>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;">
+                                                context:
+                                                <br style="font-size: 28px;"/>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        dbApp: copy of db
+                                                    </span>
+                                                    <br style="font-size: 28px;"/>
+                                                </div>
+                                                <div style="text-align: center; font-size: 28px;">
+                                                    <span style="background-color: initial; font-size: 28px;">
+                                                        setLoggedIn: login flag
+                                                    </span>
+                                                    <br style="font-size: 28px;"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;" align="center">
+                                                <br style="font-size: 28px;"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="2531" y="649" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px">
+                    &lt;AllDataPage /&gt;context:...
+                </text>
+            </switch>
+        </g>
+        <rect x="1699.44" y="441" width="156.25" height="40" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 154px; height: 1px; padding-top: 461px; margin-left: 1700px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div style="color: rgb(255, 255, 255); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; line-height: 19px;">
+                                    <div style="font-size: 28px;">
+                                        <b style="font-size: 28px;">
+                                            <span style="color: rgb(128, 128, 128); font-size: 28px;">
+                                                &lt;
+                                            </span>
+                                            <span style="color: rgb(78, 201, 176); font-size: 28px;">
+                                                App
+                                            </span>
+                                            <span style="color: rgb(128, 128, 128); font-size: 28px;">
+                                                /&gt;
+                                            </span>
+                                        </b>
+                                    </div>
+                                    <div style="background-color: rgb(0, 0, 0); font-size: 28px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1778" y="469" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle">
+                    &lt;App /&gt;
+                </text>
+            </switch>
+        </g>
+        <path d="M 1777.57 481 L 1777.57 521 Q 1777.57 531 1767.57 531 L 331 531 Q 321 531 321 541 L 321 614.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 321 619.88 L 317.5 612.88 L 321 614.63 L 324.5 612.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1777.57 481 L 1777.57 521 Q 1777.57 531 1767.57 531 L 1231 531 Q 1221 531 1221 541 L 1221 614.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1221 619.88 L 1217.5 612.88 L 1221 614.63 L 1224.5 612.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1777.57 481 L 1777.57 521 Q 1777.57 531 1767.57 531 L 581 531 Q 571 531 571 541 L 571 614.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 571 619.88 L 567.5 612.88 L 571 614.63 L 574.5 612.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1777.57 481 L 1777.57 521 Q 1777.57 531 1787.57 531 L 2728.5 531 Q 2738.5 531 2738.5 541 L 2738.5 614.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 2738.5 619.88 L 2735 612.88 L 2738.5 614.63 L 2742 612.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1777.57 481 L 1777.57 521 Q 1777.57 531 1767.57 531 L 806 531 Q 796 531 796 541 L 796 614.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 796 619.88 L 792.5 612.88 L 796 614.63 L 799.5 612.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1777.57 481 L 1777.57 521 Q 1777.57 531 1787.57 531 L 2263.5 531 Q 2273.5 531 2273.5 541 L 2273.5 614.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 2273.5 619.88 L 2270 612.88 L 2273.5 614.63 L 2277 612.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="2981" y="621" width="270" height="40" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 268px; height: 1px; padding-top: 641px; margin-left: 2982px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                <div style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; line-height: 19px;"></div>
+                                <font color="#808080" face="Consolas, Courier New, monospace" style="font-size: 28px;">
+                                    <span style="font-size: 28px;">
+                                        &lt;
+                                    </span>
+                                </font>
+                                <span style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                    NotFoundPage
+                                </span>
+                                <span style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                    /&gt;
+                                </span>
+                                <font style="font-size: 28px;" color="#808080" face="Consolas, Courier New, monospace">
+                                    <span style="font-size: 28px; background-color: rgb(0, 0, 0);">
+                                        <br style="font-size: 28px;"/>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="3116" y="649" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle" font-weight="bold">
+                    &lt;NotFoundPage /&gt;
+                </text>
+            </switch>
+        </g>
+        <path d="M 1777.57 481 L 1777.57 521 Q 1777.57 531 1787.57 531 L 3106 531 Q 3116 531 3116 541 L 3116 614.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 3116 619.88 L 3112.5 612.88 L 3116 614.63 L 3119.5 612.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1777.57 481 L 1777.57 581 Q 1777.57 591 1778.22 600.98 L 1779.39 618.61" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1779.73 623.84 L 1775.78 617.09 L 1779.39 618.61 L 1782.76 616.63 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="1699.44" y="351" width="160" height="40" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 371px; margin-left: 1700px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font style="font-size: 28px;" color="#ffffff" face="Consolas, Courier New, monospace">
+                                    <span style="font-size: 28px; background-color: rgb(26, 26, 26);">
+                                        <b style="font-size: 28px;">
+                                            index.js
+                                        </b>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1779" y="379" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle">
+                    index.js
+                </text>
+            </switch>
+        </g>
+        <path d="M 1779.02 391 L 1778.11 434.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1778 439.88 L 1774.65 432.81 L 1778.11 434.63 L 1781.65 432.96 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="191" y="101" width="530" height="360" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 532px; height: 360px; padding-top: 101px; margin-left: 191px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 530px; height: 360px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: normal; overflow-wrap: normal;">
+                                <table style="width: 100%; height: 100%; border-collapse: collapse; font-size: 28px;" cellpadding="4" height="100%" width="100%" border="1">
+                                    <tbody style="font-size: 28px;">
+                                        <tr style="font-size: 28px;">
+                                            <th style="font-size: 28px;" align="center">
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <font color="#808080" face="Consolas, Courier New, monospace" style="border-color: var(--border-color); font-size: 28px;">
+                                                        <span style="border-color: var(--border-color); font-size: 28px;">
+                                                            &lt;
+                                                        </span>
+                                                    </font>
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(78, 201, 176);">
+                                                        BankProvider
+                                                    </span>
+                                                </b>
+                                                <b style="border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 28px; color: rgb(128, 128, 128);">
+                                                        /&gt;
+                                                    </span>
+                                                </b>
+                                            </th>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;">
+                                                <br style="font-size: 28px;"/>
+                                            </td>
+                                        </tr>
+                                        <tr style="font-size: 28px;">
+                                            <td style="font-size: 28px;">
+                                                <span style="font-size: 28px;">
+                                                    passed context:
+                                                </span>
+                                                <br style="border-color: var(--border-color); font-size: 28px;"/>
+                                                <div style="border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); background-color: initial; font-size: 28px;">
+                                                        <div style="text-align: right; border-color: var(--border-color); font-size: 28px;">
+                                                            <span style="border-color: var(--border-color); background-color: initial; font-size: 28px;">
+                                                                loggedIn: login flag
+                                                            </span>
+                                                        </div>
+                                                        <div style="text-align: right; border-color: var(--border-color); font-size: 28px;">
+                                                            <span style="border-color: var(--border-color); background-color: initial; font-size: 28px;">
+                                                                setLoggedIn: login flag setter
+                                                            </span>
+                                                        </div>
+                                                        <div style="text-align: right; border-color: var(--border-color); font-size: 28px;">
+                                                            <span style="border-color: var(--border-color); background-color: initial; font-size: 28px;">
+                                                                setUserIndex: db index for current user
+                                                            </span>
+                                                        </div>
+                                                        <div style="text-align: right; border-color: var(--border-color); font-size: 28px;">
+                                                            <span style="border-color: var(--border-color); background-color: initial; font-size: 28px;">
+                                                                user: copy of current user from dbApp
+                                                            </span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: right; border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); background-color: initial; font-size: 28px;">
+                                                        dbApp: copy of db
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: right; border-color: var(--border-color); font-size: 28px;">
+                                                    <span style="border-color: var(--border-color); background-color: initial; font-size: 28px;">
+                                                        setDBapp: setter function for dbApp
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: right; border-color: var(--border-color); font-size: 28px;">
+                                                    <br style="font-size: 28px;"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="191" y="129" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px">
+                    &lt;BankProvider /&gt;passed context:...
+                </text>
+            </switch>
+        </g>
+        <path d="M 31 247 C 31 232.33 91 232.33 91 247 L 91 315 C 91 329.67 31 329.67 31 315 Z" fill="#f9f7ed" stroke="#36393d" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 31 247 C 31 258 91 258 91 247 M 31 252.5 C 31 263.5 91 263.5 91 252.5 M 31 258 C 31 269 91 269 91 258" fill="none" stroke="#36393d" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 295px; margin-left: 32px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 28px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <span style="font-size: 28px;">
+                                    db
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="61" y="304" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="28px" text-anchor="middle">
+                    db
+                </text>
+            </switch>
+        </g>
+        <path d="M 91 281 L 184.63 281" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 189.88 281 L 182.88 284.5 L 184.63 281 L 182.88 277.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>
