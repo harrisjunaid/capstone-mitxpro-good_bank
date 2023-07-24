@@ -45,8 +45,8 @@ const CustomRouter = ({ history, ...props }) => {
 };
 
 function App() {
-  const { activeUserEmail, roleAdmin, activeUser, allRecords , getUserDetails, nodeRecords , userLogInSubmit, transactionExecute, userLogOutSubmit, userRegisterSubmit, userDeleteSubmit, transferExecute, userEditSubmit} = useContext(BankContext);
-  // const { setActiveUserEmail, dataReloadSubmit} = useContext(BankContext);
+  const { activeUserEmail, roleAdmin, activeUser, allRecords, dataReloadSubmit, getUserDetails, nodeRecords , userLogInSubmit, transactionExecute, userLogOutSubmit, userRegisterSubmit, userDeleteSubmit, transferExecute, userEditSubmit} = useContext(BankContext);
+  // const { setActiveUserEmail} = useContext(BankContext);
 
   return ( 
     <>
@@ -62,7 +62,7 @@ function App() {
                   <Route path="/withdraw" element={<WithdrawPage  activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} transactionExecute={transactionExecute} userLogOutSubmit={userLogOutSubmit} />} />
                   <Route path="/transfer" element={<TransferPage  activeUser={activeUser} activeUserEmail={activeUserEmail} transferExecute={transferExecute} />} />
                   <Route path="/create" element={<CreateAccountPage userRegisterSubmit={userRegisterSubmit} />} />
-                  <Route path="/all" element={<AllDataPage allRecords={allRecords} nodeRecords={nodeRecords} userDeleteSubmit={userDeleteSubmit} userEditSubmit={userEditSubmit} />} />
+                  <Route path="/all" element={<AllDataPage allRecords={allRecords} nodeRecords={nodeRecords} dataReloadSubmit={dataReloadSubmit} userDeleteSubmit={userDeleteSubmit} userEditSubmit={userEditSubmit} />} />
                   {/* <Route path="/edit/:id" element={<Edit />} /> */}
                   <Route path="*" element={<NotFoundPage />} />
                 </Routes>

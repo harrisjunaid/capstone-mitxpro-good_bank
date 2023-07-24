@@ -4,8 +4,9 @@ import bankImg from "../assets/img/bank-main.jpg"
 
 export const WelcomePage = () => (
 	<>
-		<div className="container overflow-hidden mx-auto font-thin">
+		<div className="container mx-auto font-thin" >
 			<div className="card text-center border border-light border-4 shadow" >
+				{/* card */}
 				<div className="card-body">
 					<h4 className="card-title text-secondary">WELCOME BACK TO GOOD BANK</h4>
 					<p className="card-text lh-sm">Take advantage of our top-notch customer care, no account fees, security and fraud protection, mobile access, and accessible ATMs.</p>

@@ -26,7 +26,7 @@ export const BankProvider = ({children}) => {
 	const [activeUserEmail, setActiveUserEmail] = useState(undefined);
   const [roleAdmin, setRoleAdmin] = useState(false); 
   const [activeUser, setActiveUser] = useState(undefined);
-  const [allRecords, setAllRecords] = useState(undefined);
+  const [allRecords, setAllRecords] = useState([]);
   const adminEmail = process.env.ADMIN_EMAIL || 'admin@admin.com';
 // get details of activeUser  and allRecords from mongo using activeUserEmail
 // ########################################
@@ -181,7 +181,7 @@ export const BankProvider = ({children}) => {
       await signOut();
       setActiveUserEmail(undefined);
       setActiveUser(undefined);
-      setAllRecords(undefined);
+      setAllRecords([]);
       setRoleAdmin(false);
       history.push('/');
     } catch(error) {
@@ -209,7 +209,6 @@ export const BankProvider = ({children}) => {
       console.log(error)
     }
   }
-
 // ########################################
   const userDeleteSubmit = async (user) => {
     console.log('EXECUTED: userDeleteSubmit() in BankProvider wih input', user)
@@ -248,6 +247,7 @@ export const BankProvider = ({children}) => {
 // ########################################
 // ##  TO UPDATE "setAllRecords useState" AS APP CONTEXT ## 
   /**
+   * called by dateReloadSubmit()
    * calls nodeReadAll() to get all mongo records
    * @returns all mongo records
    */
@@ -261,11 +261,12 @@ export const BankProvider = ({children}) => {
 
   useEffect(() => {  // update allRecords when activeUserEmail changes
     if (activeUserEmail) {
-      nodeRecords().then(()=>{console.log('nodeRecords() from useEffect() in BankProvider activeUserEmail')});
+      dataReloadSubmit().then(()=>{console.log('dataReloadSubmit() from useEffect() in BankProvider activeUserEmail')});
     }
   }, [activeUserEmail, activeUser])
-// ########################################
+
   const dataReloadSubmit = async () => {
+    setAllRecords([]); // clear table (to show loading...
     try {
       await nodeRecords();
     } catch(error) {

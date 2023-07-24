@@ -18,12 +18,11 @@ export const EditModal = ({ closeModal, defaultValues, editModalSubmit }) => {
   console.log("EXECUTED: EditModal defaultValues", JSON.stringify(defaultValues, null, 2))
   const [submitStatus, SetSubmitStatus] = useState(false);
 
-  const initialDataOBJ = {
+  const formikInitialValues = {
     "name": defaultValues?.name,
     "email": defaultValues?.email,
     "password": defaultValues?.password
   }
-
   
   function capitalizeWords(str) {
     // Split the string by spaces into an array of words
@@ -46,8 +45,7 @@ export const EditModal = ({ closeModal, defaultValues, editModalSubmit }) => {
         "password": values.password
       }
       
-      const resultEditModalSubmit = await editModalSubmit(newRecordOBJ) // create user in firebase and mongodb
-      console.log('result', resultEditModalSubmit)
+      await editModalSubmit(newRecordOBJ) // create user in firebase and mongodb
       closeModal(); // close modal
       SetSubmitStatus(false); // to display success message for 6 seconds on submit
     } catch (error) {
@@ -56,22 +54,21 @@ export const EditModal = ({ closeModal, defaultValues, editModalSubmit }) => {
   }
 
   const formik = useFormik({
-    initialValues: { ...initialDataOBJ },
-    validationSchema: Yup.object({
-      name: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
-      email: Yup.string().matches(/^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
-
-, 'Only small caps allowed').email('Invalid email address').required('Required'),
-      password: Yup.string().min(8, 'Must be at least 8 characters').required('Required'),
-    }),
-    onSubmit:(values) => {
-      formikSubmit(values)   
+    initialValues: { ...formikInitialValues },
+    validationSchema: 
+      Yup.object({
+        name: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
+        email: Yup.string().matches(/^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
+          , 'Only small caps allowed').email('Invalid email address').required('Required'),
+        password: Yup.string().min(8, 'Must be at least 8 characters').required('Required'),
+      }),
+    onSubmit: async (values) => {
+      await formikSubmit(values)   
         // onRegisterCustomer(values); // function input as props to insert in to local records
         // SetSubmitStatus(false); // to display success message for 6 seconds on submit
         setTimeout(()=> SetSubmitStatus(false), 6000);
     }
-  });
-  
+  });  
   
   return (
     <div
@@ -80,7 +77,7 @@ export const EditModal = ({ closeModal, defaultValues, editModalSubmit }) => {
         if (e.target.className === "modal-container") closeModal(); // close modal if clicked outside of modal
       }}
     >
-      <div className="card mt-" >
+      <div className="card mt-0" >
         <img className="card-img"  style={{opacity: 0.85}}  src={bankImg} alt="Bank" />
         <div className="card-img-overlay text-white">
           <h1 className="card-title position-relative">EDIT RECORD</h1>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // IMAGES
 import bankImg from "../assets/img/bank-main.jpg"
 // CONTEXT
@@ -8,7 +8,7 @@ import {
 	ReloadButton
 } from '../components/ui'
 import {
-	EditModal
+	EditModal,
 }	from '../components'
 
 const TableRow = ({user, key ,userDeleteSubmit, tableEditSubmit  }) => {
@@ -20,10 +20,7 @@ const TableRow = ({user, key ,userDeleteSubmit, tableEditSubmit  }) => {
 				<td>{user.password}</td>
 				<td>${user.balance}</td>
 				<td>
-					<button className="btn btn-link" type="button" data-bs-toggle="modal"  data-bs-target="#fullScreenModal" onClick={()=>{
-						tableEditSubmit();
-						}}>Edit</button> 
-
+					<button className="btn btn-link" onClick={()=>{ tableEditSubmit(); }}>Edit</button> 
 						|
 					<button className="btn btn-link" onClick={() => {userDeleteSubmit();}}>Delete</button>
 				</td>
@@ -32,13 +29,18 @@ const TableRow = ({user, key ,userDeleteSubmit, tableEditSubmit  }) => {
 	)
 }
 
-export const AllDataPage = ({allRecords, nodeRecords, userDeleteSubmit, userEditSubmit}) => {
+export const AllDataPage = ({allRecords, dataReloadSubmit, userDeleteSubmit, userEditSubmit}) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [editEmailId, setEditEmailId] = useState(null);
- 
+	const [displayRecords, setDisplayRecords] = useState([...allRecords]); // [
+	
+	useEffect(() => {
+		setDisplayRecords([...allRecords]);
+	}, [allRecords]);
+
 	function recordList(tableEditSubmit){
-		if(!allRecords) return (<tr><td>Loading...</td></tr>)
-		return allRecords.map((user) => {
+		if(!displayRecords) return (<tr><td>Loading...</td></tr>)
+		return displayRecords.map((user) => {
 			return (
 				<>
 					<TableRow
@@ -66,38 +68,45 @@ export const AllDataPage = ({allRecords, nodeRecords, userDeleteSubmit, userEdit
 	 */
   const editModalSubmit = async (newRecordOBJ) => {
 		console.log("EXECUTED: editModalSubmit newRecordOBJ input", newRecordOBJ)
-		// HANDLE EMAIL CHANGE
-		if(editEmailId.email !== newRecordOBJ.email){
-			await nodeRecords(); // get all records from mongodb
-			const findResult = await allRecords.find((user) => user.email === newRecordOBJ.email)
-			if(findResult) {
-				alert("Error: Email already exists in database")
+		setModalOpen(false); // close modal
+		await dataReloadSubmit(); // get all records from mongodb
+		setDisplayRecords([]); // clear table (to show loading...
+		const editEmailIdExist = await allRecords?.find((user) => user.email === editEmailId.email)
+		if(editEmailIdExist) { 
+			// HANDLE EMAIL CHANGE
+			if(editEmailId.email !== newRecordOBJ.email) {
+				// await nodeRecords(); // get all records from mongodb
+				const newRecordObjEmailExist = await allRecords?.find((user) => user.email === newRecordOBJ.email)
+				if(newRecordObjEmailExist) { // should not exist
+					alert("Error: Email already exists in database")
+					setEditEmailId(null); // must be done at the end
+				} else {
+					await userEditSubmit(editEmailId, newRecordOBJ);
+					await dataReloadSubmit(); // get all records from mongodb
+					setDisplayRecords([]); // clear table (to show loading...
+					setEditEmailId(null); // must be done at the end
+				}
+			} 
+			// HANDLE PASSWORD CHANGE
+			const newRecordObjEmailExist = await allRecords?.find((user) => user.email === newRecordOBJ.email)
+			if(newRecordObjEmailExist) { // should exist
+				if(newRecordObjEmailExist.password !== newRecordOBJ.password) {
+					await userEditSubmit(editEmailId, newRecordOBJ);
+					await dataReloadSubmit(); // get all records from mongodb
+					setDisplayRecords([]); // clear table (to show loading...
+					setEditEmailId(null); // must be done at the end
+				} else {
+						alert("Error: Password already exists in database")
+							setEditEmailId(null); // must be done at the end
+					}				
+			}		
+		} else {
 				setModalOpen(false); // close modal	
-				setEditEmailId(null); // must be done at the end
-				return false;
-			} else {
-				await userEditSubmit(editEmailId, newRecordOBJ);
-				setModalOpen(false); // close modal	
-				setEditEmailId(null); // must be done at the end
-				return true; 
+				alert(`Error: Email ${editEmailId} not found in records`)
 			}
-		}
-		// HANDLE PASSWORD CHANGE
-		await nodeRecords(); // get all records from mongodb
-		const findResult = await allRecords.find((user) => user.email === newRecordOBJ.email)
-		if(findResult) {
-			if(findResult.password !== newRecordOBJ.password){
-				await userEditSubmit(editEmailId, newRecordOBJ);
-				setModalOpen(false); // close modal	
-				setEditEmailId(null); // must be done at the end
-				return true;
-			} else {
-				alert("Error: Password already exists in database")
-				setModalOpen(false); // close modal	
-				setEditEmailId(null); // must be done at the end
-				return false;
-			}
-		}
+		setDisplayRecords([]); // clear table (to show loading...
+		setEditEmailId(null); // must be done at the end		
+
 	}
 
 	return(
@@ -133,7 +142,7 @@ export const AllDataPage = ({allRecords, nodeRecords, userDeleteSubmit, userEdit
             setEditEmailId(null);
           }}
           editModalSubmit={editModalSubmit}
-          defaultValues={editEmailId !== null && allRecords.find((user) => user.email === editEmailId.email)}
+          defaultValues={editEmailId !== null && allRecords?.find((user) => user.email === editEmailId.email)}
         />
 			)}
 		</>
