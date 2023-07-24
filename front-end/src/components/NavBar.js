@@ -14,7 +14,7 @@ import './NavBar.css';
 // app context: now imported in props
 // import { BankContext } from "../assets/context/BankContext"
 
-export const NavBar = ({activeUserEmail, roleAdmin}) => {
+export const NavBar = ({activeUserEmail, roleAdmin, dataReloadSubmit }) => {
   // const { roleAdmin } = useContext(BankContext);
   // to control the active class depending 
   const getClass = ( {isActive} ) => {
@@ -41,7 +41,7 @@ export const NavBar = ({activeUserEmail, roleAdmin}) => {
           { !roleAdmin  ? <li><NavLink to="/withdraw" className={getClass}><i aria-hidden="true"><GiTakeMyMoney /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Make A Withdrawal">Withdraw</span></NavLink></li> : null }
           { !roleAdmin  ? <li><NavLink to="/transfer" className={getClass}><i aria-hidden="true"><CiMoneyCheck1 /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Deposit Funds">Transfer</span></NavLink></li> : null }
           {  roleAdmin  ? <li><NavLink to="/create" className={getClass}><i aria-hidden="true"><MdOutlineAccountBox  /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Set-Up An Account">Create Account</span></NavLink></li> : null }
-          {  roleAdmin  ? <li className="pe-5"><NavLink to="/all" className={getClass}><i aria-hidden="true"><BiData /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bank Records">All Data</span></NavLink></li> : null }
+          {  roleAdmin  ? <li className="pe-5" onClick={()=>{dataReloadSubmit()}}><NavLink to="/all" className={getClass}><i aria-hidden="true"><BiData /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bank Records">All Data</span></NavLink></li> : null }
           {/* display activeUserEmail */}
           { activeUserEmail ? <li><p>Hello, {activeUserEmail}</p></li> : null }
         </ul>

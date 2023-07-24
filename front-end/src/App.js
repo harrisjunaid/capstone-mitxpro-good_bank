@@ -54,7 +54,7 @@ function App() {
         !(activeUserEmail) ? <LandingPage userLogInSubmit={userLogInSubmit} userRegisterSubmit={userRegisterSubmit}/> : 
           <CustomRouter history={history}>
             <div className="App">
-              <NavBar activeUserEmail={activeUserEmail.email} roleAdmin={roleAdmin} />
+              <NavBar activeUserEmail={activeUserEmail.email} roleAdmin={roleAdmin} dataReloadSubmit={dataReloadSubmit} />
               <div id="page-body">
                 <Routes>
                   <Route path="/" element={<WelcomePage />} />

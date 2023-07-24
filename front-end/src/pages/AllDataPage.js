@@ -9,7 +9,9 @@ import {
 } from '../components/ui'
 import {
 	EditModal,
+	useGenerateRandomColor
 }	from '../components'
+import { setIn } from 'formik'
 
 const TableRow = ({user, key ,userDeleteSubmit, tableEditSubmit  }) => {
 	return(
@@ -32,8 +34,17 @@ const TableRow = ({user, key ,userDeleteSubmit, tableEditSubmit  }) => {
 export const AllDataPage = ({allRecords, dataReloadSubmit, userDeleteSubmit, userEditSubmit}) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [editEmailId, setEditEmailId] = useState(null);
-	const [displayRecords, setDisplayRecords] = useState([...allRecords]); // [
+	const [displayRecords, setDisplayRecords] = useState([...allRecords]); 
+	const { color, generateColor } = useGenerateRandomColor();
 	
+	useEffect(() => {
+		if(displayRecords.length === 0) {
+			setInterval(() => {
+				generateColor();
+			}, 500);
+		}		
+	}, [displayRecords, generateColor]);
+
 	useEffect(() => {
 		setDisplayRecords([...allRecords]);
 	}, [allRecords]);
@@ -133,7 +144,8 @@ export const AllDataPage = ({allRecords, dataReloadSubmit, userDeleteSubmit, use
 								</thead>
 								<tbody>{recordList(tableEditSubmit)}</tbody>
 							</table>  
-						</div>				
+						</div>
+						{!(displayRecords.length===0) ? null : <div className="text-center font-monospace" style={{backgroundColor: "#" + color, fontSize: "larger"}}>No Records Found</div>}
 					</div>
 				</div>
 			</div>

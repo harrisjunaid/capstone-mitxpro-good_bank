@@ -4,3 +4,4 @@ export { Register } from './Register';
 export { NavBar } from './NavBar';
 export { history } from './history';
 export { EditModal } from './EditModal';
+export { useGenerateRandomColor } from './useGenerateRandomColor';
