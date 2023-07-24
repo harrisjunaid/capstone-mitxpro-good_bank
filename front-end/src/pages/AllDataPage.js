@@ -68,7 +68,6 @@ export const AllDataPage = ({allRecords, dataReloadSubmit, userDeleteSubmit, use
 	 */
   const editModalSubmit = async (newRecordOBJ) => {
 		console.log("EXECUTED: editModalSubmit newRecordOBJ input", newRecordOBJ)
-		setModalOpen(false); // close modal
 		await dataReloadSubmit(); // get all records from mongodb
 		setDisplayRecords([]); // clear table (to show loading...
 		const editEmailIdExist = await allRecords?.find((user) => user.email === editEmailId.email)
@@ -85,6 +84,7 @@ export const AllDataPage = ({allRecords, dataReloadSubmit, userDeleteSubmit, use
 					await dataReloadSubmit(); // get all records from mongodb
 					setDisplayRecords([]); // clear table (to show loading...
 					setEditEmailId(null); // must be done at the end
+					// setModalOpen(false); // close modal
 				}
 			} 
 			// HANDLE PASSWORD CHANGE
@@ -99,13 +99,15 @@ export const AllDataPage = ({allRecords, dataReloadSubmit, userDeleteSubmit, use
 						alert("Error: Password already exists in database")
 							setEditEmailId(null); // must be done at the end
 					}				
+			} else {
 			}		
 		} else {
-				setModalOpen(false); // close modal	
+				// setModalOpen(false); // close modal	
 				alert(`Error: Email ${editEmailId} not found in records`)
 			}
 		setDisplayRecords([]); // clear table (to show loading...
-		setEditEmailId(null); // must be done at the end		
+		setEditEmailId(null); // must be done at the end	
+		setModalOpen(false); // close modal	
 
 	}
 

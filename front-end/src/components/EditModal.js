@@ -45,9 +45,9 @@ export const EditModal = ({ closeModal, defaultValues, editModalSubmit }) => {
         "password": values.password
       }
       
+      SetSubmitStatus(true); // to display success message for 6 seconds on submit
       await editModalSubmit(newRecordOBJ) // create user in firebase and mongodb
-      closeModal(); // close modal
-      SetSubmitStatus(false); // to display success message for 6 seconds on submit
+      // closeModal(); // close modal
     } catch (error) {
       console.log(error)
     }
@@ -84,7 +84,7 @@ export const EditModal = ({ closeModal, defaultValues, editModalSubmit }) => {
           <LogoutButton />
           <div className="card-text lh-sm">
             <div className="container  text-dark">
-              <form className="inputForm" onSubmit={formik.handleSubmit}>
+              {!submitStatus ? (<form className="inputForm" onSubmit={formik.handleSubmit}>
                 <div className="form-floating mb-3 input-container">
                   <MdOutlinePersonOutline className="icon fa-lg"/>
                   <input className="form-control" id="name" name="name" type="text" placeholder="Name" 
@@ -123,10 +123,9 @@ export const EditModal = ({ closeModal, defaultValues, editModalSubmit }) => {
                     <button  id="reset" type="button" className="card-link btn btn-secondary mt-auto"  onClick={formik.handleReset} disabled={false}>Reset</button>
                   </div>
                   <button id="back" type="button" className="card-link btn btn-secondary mt-auto" onClick={() => closeModal()}>Go Back</button>
-                </div>                
-
-              </form>
-              {submitStatus ? <pre className="text-warning mt-3 fs-2 h-25 bg-success">{`User Created: ${formik.values.name} : ${formik.values.email} : ${formik.values.password}`}</pre> : null}
+                </div>
+                </form> ) : null}
+              {submitStatus ? <pre className="text-warning mt-3 fs-2 h-25 bg-success">{`UPDATE REQUESTED: ${formik.values.name} : ${formik.values.email} : ${formik.values.password}`}</pre> : null}
             </div>  
           </div>
         </div>
