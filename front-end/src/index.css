@@ -3,14 +3,17 @@ body {
     margin: 0;
     padding: 0;
   }
+
   .hamburger,
   .close {
     font-size: 2rem;
     color: #0966C2;
   }
+
   header {
     margin: 1rem;
   }
+  
   .identity {
     display: flex;
     align-items: center;

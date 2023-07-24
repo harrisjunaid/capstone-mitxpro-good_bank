@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-
-//START_CODE
-// components
+// Components
 import {
   LogIn,
   Register
  } from '../components'
 
-export const LandingPage = ({userRegisterSubmit}) => {
+export const LandingPage = ({ userLogInSubmit, userRegisterSubmit }) => {
+  // const { userLogInSubmit, userRegisterSubmit } = useContext(BankContext);
+  // to toggle between login and register
   const [display, setDisplay] = useState('login');
-
   const toggleDisplay = (to) => {
     setDisplay(to);
   }
@@ -17,7 +16,7 @@ export const LandingPage = ({userRegisterSubmit}) => {
   return (
     <div className="App">
       {
-        display === "login" ? <LogIn changeOption = { toggleDisplay } /> : <Register changeOption = { toggleDisplay } userRegisterSubmit = {userRegisterSubmit} />
+        display === "login" ? <LogIn changeOption = { toggleDisplay } userLogInSubmit = {userLogInSubmit} /> : <Register changeOption = { toggleDisplay } userRegisterSubmit = {userRegisterSubmit} />
       }
     </div>
   );

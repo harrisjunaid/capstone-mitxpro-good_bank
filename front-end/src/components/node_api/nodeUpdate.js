@@ -4,6 +4,9 @@
  * @returns 
  */
 export const nodeUpdate = async (newUserOBJ) => {
+  console.log('EXECUTING nodeUpdate() to fetch PATCH')
+  const connectTo = process.env.CONNECT_TO || 'localhost'
+  console.log('connectTo👩‍💻', connectTo, typeof(connectTo), process.env.CONNECT_TO)
   console.log('EXECUTED: nodeUpdate.js')
   if (!newUserOBJ) {console.log("no Params found"); return; }
   const id = String(newUserOBJ._id);
@@ -12,7 +15,7 @@ export const nodeUpdate = async (newUserOBJ) => {
 
   console.log('nodeUpdate id from newUserOBJ to PATCH id',id);
   // This will send a post request to update the data in the database.
-  await fetch(`http://localhost:5050/record/${id}`, {
+  await fetch(`http://159.89.47.38:5050/record/${id}`, {
     method: "PATCH",
     body: JSON.stringify(rest),
     headers: {

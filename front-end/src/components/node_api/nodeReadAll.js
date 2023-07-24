@@ -1,6 +1,10 @@
 export const nodeReadAll = async () => {
+  console.log('EXECUTED: nodeReadAll()')
+  const connectTo = process.env.CONNECT_TO || 'localhost'
+  console.log('connectTo👩‍💻', connectTo, typeof(connectTo), process.env.CONNECT_TO)
+
   try {
-    const response = await fetch("http://localhost:5050/record", {
+    const response = await fetch(`http://159.89.47.38:5050/record`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

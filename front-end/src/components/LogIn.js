@@ -1,11 +1,9 @@
-import React, { useContext } from "react"
+import React, {  } from "react"
 //icons
 import { HiOutlineMail } from "react-icons/hi"
 import { TbPassword } from "react-icons/tb"
 // background image
 import bankImg from "../assets/img/bank-main.jpg"
-// app context
-import { BankContext } from "../assets/context/BankContext"
 // formik
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -19,11 +17,11 @@ import { history } from '../components'
  * @param {*} param0 
  * @returns LogIn component
  */
-export const LogIn =  ({ changeOption }) => {
+export const LogIn =  ({ changeOption, userLogInSubmit }) => {
   // load data from user context
-  const { userLogInSubmit } = useContext(BankContext);
+  // const { userLogInSubmit } = useContext(BankContext);
 
-  const initialData = { //form initial data
+  const formikInitialValues = { //form initial data
     "name": "",
     "email": ""
   }
@@ -38,17 +36,18 @@ export const LogIn =  ({ changeOption }) => {
   }
 
   const formik = useFormik({
-    initialValues: { ...initialData },
-    validationSchema: Yup.object({
-      email: Yup.string()
-        .matches(/^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, 'Only small caps allowed')
-        .email('Invalid email address')
-        .required('Required'),
-      password: Yup.string()
-        .min(8, 'Must be at least 8 characters')
-        .required('Required'),
-    }),
-    onSubmit:(values) => {
+    initialValues: { ...formikInitialValues },
+    validationSchema:
+      Yup.object({
+        email: Yup.string()
+          .matches(/^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, 'Only small caps allowed')
+          .email('Invalid email address')
+          .required('Required'),
+        password: Yup.string()
+          .min(8, 'Must be at least 8 characters')
+          .required('Required'),
+      }),
+    onSubmit: (values) => {
       (onSubmitFunction(values)) 
     }
   });  
@@ -64,6 +63,7 @@ export const LogIn =  ({ changeOption }) => {
             <div className="container  text-dark">
               {/*input form */}
               <form className="inputForm" onSubmit={formik.handleSubmit}>
+                {/* email */}
                 <div className="form-floating mb-3">
                   <HiOutlineMail className="icon fa-lg"/>
                   <input className="form-control" id="email" name="email" type="email" placeholder="Email" 
@@ -74,6 +74,7 @@ export const LogIn =  ({ changeOption }) => {
                   {formik.errors.email ? <p className="text-danger fs-5 error-message">{formik.errors.email}</p>:null}
                   <label htmlFor="email">Email</label>
                 </div>
+                {/* password */}
                 <div className="form-floating mb-3">
                   <TbPassword className="icon fa-lg"/>
                   <input className="form-control" id="password" name="password" type="password" placeholder="Password" 
@@ -84,6 +85,7 @@ export const LogIn =  ({ changeOption }) => {
                   {formik.errors.password ? <p className="text-danger fs-5 error-message">{formik.errors.password}</p>:null}
                   <label htmlFor="password">Password</label>
                 </div>
+                {/*buttons */}
                 <div className="btn-group gap-1 btn-group-vertical btn-group-lg " role="group" aria-label="Login Buttons">
                   <div className="btn-group gap-1 btn-group-lg" role="group" aria-label="Login Buttons">
                     <button  id="submit" type="button"  className="card-link btn btn-secondary mt-auto" disabled={!(formik.isValid && formik.dirty)} onClick={formik.handleSubmit}>Submit</button>
