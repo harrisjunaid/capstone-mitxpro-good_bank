@@ -45,30 +45,30 @@ const CustomRouter = ({ history, ...props }) => {
 };
 
 function App() {
-  const { activeUserEmail, roleAdmin, activeUser, allRecords ,setActiveUserEmail, getUserDetails, nodeRecords , userLogInSubmit, transactionExecute, userLogOutSubmit, userRegisterSubmit, userDeleteSubmit, dataReloadSubmit, transferExecute, userEditSubmit} = useContext(BankContext);
-  // activeUserEmail by default is undefined
-  
+  const { activeUserEmail, roleAdmin, activeUser, allRecords , getUserDetails, nodeRecords , userLogInSubmit, transactionExecute, userLogOutSubmit, userRegisterSubmit, userDeleteSubmit, transferExecute, userEditSubmit} = useContext(BankContext);
+  // const { setActiveUserEmail, dataReloadSubmit} = useContext(BankContext);
+
   return ( 
     <>
       {
-        !(activeUserEmail) ? <LandingPage userRegisterSubmit={userRegisterSubmit}/> : 
-        <CustomRouter history = {history}>
-          <div className="App">
-            <NavBar email={activeUserEmail.email} roleAdmin={roleAdmin} />
-            <div id="page-body">
-              <Routes>
-                <Route path="/" element={<WelcomePage />} />
-                <Route path="/deposit" element={<DepositPage activeUser = {activeUser} activeUserEmail = {activeUserEmail} getUserDetails = {getUserDetails} userLogOutSubmit = {userLogOutSubmit} transactionExecute = {transactionExecute} />} />
-                <Route path="/withdraw" element={<WithdrawPage />} />
-                <Route path="/transfer" element={<TransferPage />} />
-                <Route path="/create" element={<CreateAccountPage userRegisterSubmit = {userRegisterSubmit} />} />
-                <Route path="/all" element={<AllDataPage allRecords={allRecords} nodeRecords = {nodeRecords} userDeleteSubmit={userDeleteSubmit} userEditSubmit={userEditSubmit} />} />
-                {/* <Route path="/edit/:id" element={<Edit />} /> */}
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
+        !(activeUserEmail) ? <LandingPage userLogInSubmit={userLogInSubmit} userRegisterSubmit={userRegisterSubmit}/> : 
+          <CustomRouter history={history}>
+            <div className="App">
+              <NavBar activeUserEmail={activeUserEmail.email} roleAdmin={roleAdmin} />
+              <div id="page-body">
+                <Routes>
+                  <Route path="/" element={<WelcomePage />} />
+                  <Route path="/deposit" element={<DepositPage activeUser={activeUser} activeUserEmail={activeUserEmail} getUserDetails={getUserDetails} userLogOutSubmit={userLogOutSubmit} transactionExecute={transactionExecute} />} />
+                  <Route path="/withdraw" element={<WithdrawPage  activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} transactionExecute={transactionExecute} userLogOutSubmit={userLogOutSubmit} />} />
+                  <Route path="/transfer" element={<TransferPage  activeUser={activeUser} activeUserEmail={activeUserEmail} transferExecute={transferExecute} />} />
+                  <Route path="/create" element={<CreateAccountPage userRegisterSubmit={userRegisterSubmit} />} />
+                  <Route path="/all" element={<AllDataPage allRecords={allRecords} nodeRecords={nodeRecords} userDeleteSubmit={userDeleteSubmit} userEditSubmit={userEditSubmit} />} />
+                  {/* <Route path="/edit/:id" element={<Edit />} /> */}
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </div>
             </div>
-          </div>
-        </CustomRouter>
+          </CustomRouter>
       }    
     </>
   );

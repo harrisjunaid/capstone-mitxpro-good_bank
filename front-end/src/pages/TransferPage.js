@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react"
+import React, { useState } from "react"
 // icons
 import { HiOutlineMail } from "react-icons/hi"
 // formik and yup
@@ -6,8 +6,6 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 // images
 import bankImg from "../assets/img/bank-main.jpg"
-// context
-import { BankContext } from '../assets/context/BankContext';
 // components
 import { LogoutButton } from '../components/ui/LogoutButton';
 import { LandingPage } from "./LandingPage";
@@ -18,8 +16,8 @@ import { LandingPage } from "./LandingPage";
 // 	nodeUpdate
 // } from '../components/api_mongo'
 
-export const TransferPage = () => {
-	const { activeUser, activeUserEmail, transferExecute}  = useContext(BankContext);
+export const TransferPage = ({ activeUser, activeUserEmail, transferExecute}) => {
+	// const { activeUser, activeUserEmail, transferExecute}  = useContext(BankContext);
 	// const [amount, setAmount] =useState(null);
 	const [submitStatus, SetSubmitStatus] = useState(false);
 	const [transferStatus, setTransferStatus] = useState(false);

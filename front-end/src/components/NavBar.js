@@ -14,8 +14,9 @@ import './NavBar.css';
 // app context: now imported in props
 // import { BankContext } from "../assets/context/BankContext"
 
-export const NavBar = ({email, roleAdmin}) => {
+export const NavBar = ({activeUserEmail, roleAdmin}) => {
   // const { roleAdmin } = useContext(BankContext);
+  // to control the active class depending 
   const getClass = ( {isActive} ) => {
     return isActive ? "nav-active" : null;
   } 
@@ -23,40 +24,33 @@ export const NavBar = ({email, roleAdmin}) => {
 
   return (
     <header className="mb-3">
-    <div className="identity">
-      <p className="ps-5">
-        <i aria-hidden="true"><img src={logo} alt="Bank Logo" width="120px"/><span className="sr-only">Our Bank</span></i>
-      </p>
-  
-      <a className="hamburger" href="#navbar" aria-label="Open main menu">
-        <span className="sr-only">Open main menu</span>
-        <i className="fas fa-bars pe-5" aria-hidden="true"></i>
-      </a>
-    </div>
-    <nav id="navbar">
-    <ul>
-      <li>
-        <NavLink to="/" className={getClass}>
-          <i aria-hidden="true"> <AiFillBank /> </i> 
-          <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Welcome Page"> Home </span>
-        </NavLink>
-      </li>
-      { !roleAdmin ? <li><NavLink to="/deposit" className={getClass}><i aria-hidden="true"><GiPayMoney /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Deposit Funds">Deposit</span></NavLink></li> : null }
-      { !roleAdmin ? <li><NavLink to="/withdraw" className={getClass}><i aria-hidden="true"><GiTakeMyMoney /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Make A Withdrawal">Withdraw</span></NavLink></li> : null }
-      { !roleAdmin ? <li><NavLink to="/transfer" className={getClass}><i aria-hidden="true"><CiMoneyCheck1 /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Deposit Funds">Transfer</span></NavLink></li> : null }
-      { roleAdmin ? <li><NavLink to="/create" className={getClass}><i aria-hidden="true"><MdOutlineAccountBox  /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Set-Up An Account">Create Account</span></NavLink></li> : null }
-      { roleAdmin ? <li className="pe-5"><NavLink to="/all" className={getClass}><i aria-hidden="true"><BiData /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bank Records">All Data</span></NavLink></li> : null }
-      {/* // Insert the username here */}
-      { email ? <li><p>Hello, {email}</p></li> : null }
-    </ul>
-      <a className="close" href="#" aria-label="Close main menu">
-        <span className="sr-only">Close main menu</span>
-        <i className="fas fa-times pe-5" aria-hidden="true"></i>
-      </a>
-    </nav>
-    </header>
-  
-  
+      <div className="identity">
+        <p className="ps-5">
+          <i aria-hidden="true"><img src={logo} alt="Bank Logo" width="120px"/><span className="sr-only">Our Bank</span></i>
+        </p>  
+        <a className="hamburger" href="#navbar" aria-label="Open main menu">
+          <span className="sr-only">Open main menu</span>
+          <i className="fas fa-bars pe-5" aria-hidden="true"></i>
+        </a>
+      </div>
+      <nav id="navbar">
+        <ul>
+          {/* navbar options */}
+          { true        ? <li><NavLink to="/"><i aria-hidden="true"> <AiFillBank /></i><span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Welcome Page"> Home </span></NavLink></li> : null }
+          { !roleAdmin  ? <li><NavLink to="/deposit" className={getClass}><i aria-hidden="true"><GiPayMoney /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Deposit Funds">Deposit</span></NavLink></li> : null }
+          { !roleAdmin  ? <li><NavLink to="/withdraw" className={getClass}><i aria-hidden="true"><GiTakeMyMoney /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Make A Withdrawal">Withdraw</span></NavLink></li> : null }
+          { !roleAdmin  ? <li><NavLink to="/transfer" className={getClass}><i aria-hidden="true"><CiMoneyCheck1 /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Deposit Funds">Transfer</span></NavLink></li> : null }
+          {  roleAdmin  ? <li><NavLink to="/create" className={getClass}><i aria-hidden="true"><MdOutlineAccountBox  /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Set-Up An Account">Create Account</span></NavLink></li> : null }
+          {  roleAdmin  ? <li className="pe-5"><NavLink to="/all" className={getClass}><i aria-hidden="true"><BiData /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bank Records">All Data</span></NavLink></li> : null }
+          {/* display activeUserEmail */}
+          { activeUserEmail ? <li><p>Hello, {activeUserEmail}</p></li> : null }
+        </ul>
+        <a className="close" href="#" aria-label="Close main menu">
+          <span className="sr-only">Close main menu</span>
+          <i className="fas fa-times pe-5" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </header>  
   );
 }
 

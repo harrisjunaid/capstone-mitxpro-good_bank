@@ -1,8 +1,6 @@
-import React, {useContext, useEffect, useState} from "react"
+import React, { useEffect, useState} from "react"
 // images
 import bankImg from "../assets/img/bank-main.jpg"
-// context
-import { BankContext } from '../assets/context/BankContext';
 // components
 import { history } from '../components';
 // ui
@@ -10,8 +8,8 @@ import { LogoutButton } from '../components/ui';
 // pages
 import { LandingPage } from "../pages";
 
-export const WithdrawPage = () => {
-	const { activeUserEmail, activeUser, getUserDetails, transactionExecute, userLogOutSubmit }  = useContext(BankContext);
+export const WithdrawPage = ({ activeUserEmail, activeUser, getUserDetails, transactionExecute, userLogOutSubmit }) => {
+	// const { activeUserEmail, activeUser, getUserDetails, transactionExecute, userLogOutSubmit }  = useContext(BankContext);
 	const [amount, setAmount] =useState(null);
 
 	useEffect(() => {
