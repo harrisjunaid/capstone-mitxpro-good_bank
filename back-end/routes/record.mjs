@@ -2,11 +2,26 @@ import express from "express";
 import { db } from "../db/index.mjs";
 import { ObjectId } from "mongodb";
 
-// import  deleteUserUsingEmail   from '../api/firebase/firebaseAuth.mjs'
-import { bingDeleteFirebaseUser } from "../api/firebase/bingDeleteFirebaseUser.mjs";
 const router = express.Router();
-
-
+//  *********** CRUD ***********
+// This section will help you create a new record.
+router.post("/", async (req, res) => {
+  console.log("POSTING:  from / collection.insertOne(newDocument)", JSON.stringify(req.body), "in request")
+  let newDocument = {
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+    balance: req.body.balance,
+  };
+  try {
+    let collection = await db.collection("records");
+    let result = await collection.insertOne(newDocument);
+    res.send(result).status(204);
+  } catch (error) { // Handle any errors that may occur
+    console.error(error);
+    res.send(error).status(500);
+  }
+});
 
 // This section will help you get a list of all the records.
 router.get("/", async (req, res) => {
@@ -27,7 +42,7 @@ router.get("/", async (req, res) => {
 // });
 
 // :email
-// This section will help you get a single record by id
+// This section will help you get a single record by email
 router.get("/:email", async (req, res) => {
   console.log("GETTING:  from /:email collection.findOne(query)", JSON.stringify(req.params.email), "in request")
   let collection = await db.collection("records");
@@ -43,39 +58,6 @@ router.get("/:email", async (req, res) => {
     console.log("GETTING:  from /:email success", JSON.stringify(result), "in response")
   }
 });
-
-// This section will help you create a new record.
-// router.post("/", async (req, res) => {
-//   console.log("POSTING:  from /:email collection.findOne(query)", JSON.stringify(req.body), "in request")
-//   let newDocument = {
-//     name: req.body.name,
-//     email: req.body.email,
-//     password: req.body.password,
-//     balance: req.body.balance,
-//   };
-//   let collection = await db.collection("records");
-//   let result = await collection.insertOne(newDocument);
-//   res.send(result).status(204);
-// });
-
-router.post("/", async (req, res) => {
-  console.log("POSTING:  from / collection.insertOne(newDocument)", JSON.stringify(req.body), "in request")
-  let newDocument = {
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-    balance: req.body.balance,
-  };
-  try {
-    let collection = await db.collection("records");
-    let result = await collection.insertOne(newDocument);
-    res.send(result).status(204);
-  } catch (error) { // Handle any errors that may occur
-    console.error(error);
-    res.send(error).status(500);
-  }
-});
-
 
 // This section will help you update a record by id.
 router.patch("/:id", async (req, res) => {
