@@ -1,1 +1,1 @@
-node --experimental-specifier-resolution=node server.mjs
+node --experimental-specifier-resolution=node server.js

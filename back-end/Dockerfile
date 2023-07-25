@@ -8,4 +8,4 @@ COPY . .
 EXPOSE 5050
 RUN chown -R node /app
 USER node
-CMD ["node", "--experimental-specifier-resolution=node", "server.mjs"]
+CMD ["node", "--experimental-specifier-resolution=node", "server.js"]
