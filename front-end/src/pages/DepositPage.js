@@ -13,7 +13,7 @@ import { LandingPage } from "./LandingPage";
 
 export const DepositPage = ({activeUser, activeUserEmail, getUserDetails, userLogOutSubmit, transactionExecute}) => {
 	// const { activeUser, activeUserEmail, getUserDetails, userLogOutSubmit, transactionExecute}  = useContext(BankContext);
-	const [amount, setAmount] =useState(null);
+	const [amount, setAmount] = useState(null);
 
 	useEffect(() => {
 		if(activeUserEmail?.email === (null || undefined)) {

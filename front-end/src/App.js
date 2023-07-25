@@ -57,14 +57,14 @@ function App() {
               <NavBar activeUserEmail={activeUserEmail.email} roleAdmin={roleAdmin} dataReloadSubmit={dataReloadSubmit} />
               <div id="page-body">
                 <Routes>
-                  <Route path="/" element={<WelcomePage />} />
-                  <Route path="/deposit" element={<DepositPage activeUser={activeUser} activeUserEmail={activeUserEmail} getUserDetails={getUserDetails} userLogOutSubmit={userLogOutSubmit} transactionExecute={transactionExecute} />} />
-                  <Route path="/withdraw" element={<WithdrawPage  activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} transactionExecute={transactionExecute} userLogOutSubmit={userLogOutSubmit} />} />
-                  <Route path="/transfer" element={<TransferPage  activeUser={activeUser} activeUserEmail={activeUserEmail} transferExecute={transferExecute} />} />
-                  <Route path="/create" element={<CreateAccountPage userRegisterSubmit={userRegisterSubmit} />} />
-                  <Route path="/all" element={<AllDataPage allRecords={allRecords} nodeRecords={nodeRecords} dataReloadSubmit={dataReloadSubmit} userDeleteSubmit={userDeleteSubmit} userEditSubmit={userEditSubmit} />} />
+                  <Route path="/"         element={<WelcomePage />} />
+                  <Route path="/deposit"  element={<DepositPage       activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} userLogOutSubmit={userLogOutSubmit} transactionExecute={transactionExecute} />} />
+                  <Route path="/withdraw" element={<WithdrawPage      activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} userLogOutSubmit={userLogOutSubmit} transactionExecute={transactionExecute}  />} />
+                  <Route path="/transfer" element={<TransferPage      activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} userLogOutSubmit={userLogOutSubmit} transferExecute={transferExecute}  />} />
+                  <Route path="/create"   element={<CreateAccountPage userRegisterSubmit={userRegisterSubmit} />} />
+                  <Route path="/all"      element={<AllDataPage       allRecords={allRecords} dataReloadSubmit={dataReloadSubmit} userDeleteSubmit={userDeleteSubmit} userEditSubmit={userEditSubmit} />} />
                   {/* <Route path="/edit/:id" element={<Edit />} /> */}
-                  <Route path="*" element={<NotFoundPage />} />
+                  <Route path="*"         element={<NotFoundPage />} />
                 </Routes>
               </div>
             </div>

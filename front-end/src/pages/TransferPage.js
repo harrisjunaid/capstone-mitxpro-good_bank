@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 // icons
 import { HiOutlineMail } from "react-icons/hi"
 // formik and yup
@@ -9,6 +9,7 @@ import bankImg from "../assets/img/bank-main.jpg"
 // components
 import { LogoutButton } from '../components/ui/LogoutButton';
 import { LandingPage } from "./LandingPage";
+import { history } from "../components"
 // import { input } from "@testing-library/user-event/dist/types/event"
 // IMPORTANT NOT TO USE THIS IMPORT
 // DepositPage should only use BankContext
@@ -16,18 +17,28 @@ import { LandingPage } from "./LandingPage";
 // 	nodeUpdate
 // } from '../components/api_mongo'
 
-export const TransferPage = ({ activeUser, activeUserEmail, transferExecute}) => {
+export const TransferPage = ({ activeUser, activeUserEmail, getUserDetails, transferExecute, userLogOutSubmit }) => {
 	// const { activeUser, activeUserEmail, transferExecute}  = useContext(BankContext);
-	// const [amount, setAmount] =useState(null);
+	const [amount, setAmount] = useState(0);
 	const [submitStatus, SetSubmitStatus] = useState(false);
 	const [transferStatus, setTransferStatus] = useState(false);
 
+	useEffect(() => {
+		if(activeUserEmail?.email === (null || undefined)) {
+			userLogOutSubmit();
+			history.push('/');
+			return;
+		}
+		console.log("user is:😁", activeUserEmail)
+		console.log("selected deposit amont:💲", Number(amount))
+	}, [ activeUserEmail, amount]);
 
 	const initialData = {
     "email": "",
 		"amount": 0
   }
-	const formikSubmit = (values) => {
+	const formikSubmit = async (values) => {
+		setAmount(values.amount);
 		const inputOBJ = {
 			"emailTo": values.email,
 			"emailFrom": activeUserEmail.email,
@@ -39,12 +50,12 @@ export const TransferPage = ({ activeUser, activeUserEmail, transferExecute}) =>
 		 * update activeUser in context
 		 */
 
-		 transferExecute(inputOBJ)
-		  .then((result) => {
-				setTransferStatus(result)
-				if(!result) alert('Transfer Failed')
-		})
-  }
+		const transferResult = await transferExecute(inputOBJ)
+	  await getUserDetails()
+		setTransferStatus(transferResult)
+		if(!transferResult) alert('Transfer Failed')
+	}
+
 	const formik = useFormik({
     initialValues: { ...initialData },
     validationSchema: Yup.object({
@@ -55,8 +66,8 @@ export const TransferPage = ({ activeUser, activeUserEmail, transferExecute}) =>
 		}),
     onSubmit:(values) => {
       formikSubmit(values)   
-        SetSubmitStatus(true); // to display success message for 6 seconds on submit
-        setTimeout(()=> SetSubmitStatus(false), 6000);
+			SetSubmitStatus(true); // to display success message for 6 seconds on submit
+			setTimeout(()=> SetSubmitStatus(false), 6000);
     }
   });
 
