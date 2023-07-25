@@ -46,7 +46,7 @@ export const EditModal = ({ closeModal, defaultValues, editModalSubmit }) => {
       }
       
       SetSubmitStatus(true); // to display success message for 6 seconds on submit
-      await editModalSubmit(newRecordOBJ) // create user in firebase and mongodb
+      await editModalSubmit(newRecordOBJ) // create user in firebase and localhost
       // closeModal(); // close modal
     } catch (error) {
       console.log(error)

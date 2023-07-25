@@ -79,20 +79,20 @@ export const AllDataPage = ({allRecords, dataReloadSubmit, userDeleteSubmit, use
 	 */
   const editModalSubmit = async (newRecordOBJ) => {
 		console.log("EXECUTED: editModalSubmit newRecordOBJ input", newRecordOBJ)
-		await dataReloadSubmit(); // get all records from mongodb
+		await dataReloadSubmit(); // get all records from localhost
 		setDisplayRecords([]); // clear table (to show loading...
 		const editEmailIdExist = await allRecords?.find((user) => user.email === editEmailId.email)
 		if(editEmailIdExist) { 
 			// HANDLE EMAIL CHANGE
 			if(editEmailId.email !== newRecordOBJ.email) {
-				// await nodeRecords(); // get all records from mongodb
+				// await nodeRecords(); // get all records from localhost
 				const newRecordObjEmailExist = await allRecords?.find((user) => user.email === newRecordOBJ.email)
 				if(newRecordObjEmailExist) { // should not exist
 					alert("Error: Email already exists in database")
 					setEditEmailId(null); // must be done at the end
 				} else {
 					await userEditSubmit(editEmailId, newRecordOBJ);
-					await dataReloadSubmit(); // get all records from mongodb
+					await dataReloadSubmit(); // get all records from localhost
 					setDisplayRecords([]); // clear table (to show loading...
 					setEditEmailId(null); // must be done at the end
 					// setModalOpen(false); // close modal
@@ -103,7 +103,7 @@ export const AllDataPage = ({allRecords, dataReloadSubmit, userDeleteSubmit, use
 			if(newRecordObjEmailExist) { // should exist
 				if(newRecordObjEmailExist.password !== newRecordOBJ.password) {
 					await userEditSubmit(editEmailId, newRecordOBJ);
-					await dataReloadSubmit(); // get all records from mongodb
+					await dataReloadSubmit(); // get all records from localhost
 					setDisplayRecords([]); // clear table (to show loading...
 					setEditEmailId(null); // must be done at the end
 				} else {

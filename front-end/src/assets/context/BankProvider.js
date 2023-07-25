@@ -57,7 +57,7 @@ export const BankProvider = ({children}) => {
 // ########################################
 /**
  * HANDLES DEPOSIT AND WITHDRAWAL TRANSACTIONS
- * async function to update mongoDB
+ * async function to update localhost
  * using nodeUpdate() in ./api_mongo
  * @param {*} newUserOBJ 
  * @returns (not in use) resStatusOBJ
@@ -200,7 +200,7 @@ export const BankProvider = ({children}) => {
       const resNodeCreate = await nodeCreate(values?.name, values?.email, values?.password, 0); // Wait for the second promise to resolve
       // indicate success
       if((firebaseUser?.user?.email === values?.email) && resNodeCreate?.status === 200){
-        console.log('userRegisterSubmit(): successfully created user in firebase and mongodb')
+        console.log('userRegisterSubmit(): successfully created user in firebase and localhost')
         return firebaseUser
         // IMPORTANT: not to update setActiveUserEmail() 
         // setActiveUserEmail(JSON.parse(`{"email": "${values?.email}"}`)) // parse the string to JSON

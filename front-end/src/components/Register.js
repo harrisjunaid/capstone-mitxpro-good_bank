@@ -35,7 +35,7 @@ export const Register = ({changeOption, userRegisterSubmit}) => {
     const { name, email, password } = values;
     const newUser = { name: capitalizeWords(name) , email: email.toLowerCase(), password, balance: 0 };
     try {
-      const resultUserRegisterSubmit = await userRegisterSubmit(newUser) // create user in firebase and mongodb  
+      const resultUserRegisterSubmit = await userRegisterSubmit(newUser) // create user in firebase and localhost  
       SetSubmitStatus(resultUserRegisterSubmit)    
     } catch (error) {
       console.log(error)
