@@ -1,8 +1,8 @@
 import db from "./conn.js";
 
+//  class that handles CRUD operations for a records collection
 class UsersDAL {
   constructor() {
-    // this.client = client;
     this.db = db
     this.collection = this.db.collection("records");
   }
@@ -44,6 +44,7 @@ class UsersDAL {
 }
 
 const usersDAL = new UsersDAL()
-
+// database object from data access class UsersDAL
+// can be used in routes, controllers, or middleware functions
 export default usersDAL
 
