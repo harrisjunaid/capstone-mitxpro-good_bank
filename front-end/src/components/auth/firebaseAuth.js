@@ -3,14 +3,23 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 // Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBwgK_FD4pIS6NiS5mZ3zsrwBiOgFW-ER4",
+//   authDomain: "mitxpro-capstone-1.firebaseapp.com",
+//   projectId: "mitxpro-capstone-1",
+//   storageBucket: "mitxpro-capstone-1.appspot.com",
+//   messagingSenderId: "899645395923",
+//   appId: "1:899645395923:web:11ecd5f519d48e6d57d526",
+//   measurementId: "G-NFJYQGS4MS"
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyBwgK_FD4pIS6NiS5mZ3zsrwBiOgFW-ER4",
-  authDomain: "mitxpro-capstone-1.firebaseapp.com",
-  projectId: "mitxpro-capstone-1",
-  storageBucket: "mitxpro-capstone-1.appspot.com",
-  messagingSenderId: "899645395923",
-  appId: "1:899645395923:web:11ecd5f519d48e6d57d526",
-  measurementId: "G-NFJYQGS4MS"
+  apiKey: "AIzaSyDn3YVt67m42dryTHoCqHzscxV5xqdiGxY",
+  authDomain: "good-bank-5051.firebaseapp.com",
+  projectId: "good-bank-5051",
+  storageBucket: "good-bank-5051.appspot.com",
+  messagingSenderId: "387709040027",
+  appId: "1:387709040027:web:03211058ab645ceb11dd3e",
+  measurementId: "G-SKHQXPLKCK"
 };
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);

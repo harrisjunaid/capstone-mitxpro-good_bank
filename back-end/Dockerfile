@@ -6,7 +6,7 @@ COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 # RUN npm install && mv node_modules ../
 COPY ./node_modules ./node_modules
 COPY . .
-EXPOSE 5050
+EXPOSE 5051
 RUN chown -R node /app
 USER node
 CMD ["node", "--experimental-specifier-resolution=node", "server.js"]
