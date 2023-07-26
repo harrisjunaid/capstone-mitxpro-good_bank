@@ -3,7 +3,7 @@ export const nodeDelete = async (id) => {
   console.log('EXECUTED: nodeDelete() in mongoDelete.js with input', id)
   console.log('connectTo👩‍💻', connectTo, typeof(connectTo), process.env.CONNECT_TO)
   try {
-    const res = await fetch(`http://159.89.47.38:5050/record/${id}`, {
+    const res = await fetch(`http://159.89.47.38:5051/record/${id}`, {
       method: "DELETE",
     });
     const resJSON = await res.json();

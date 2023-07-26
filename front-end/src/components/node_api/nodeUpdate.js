@@ -15,7 +15,7 @@ export const nodeUpdate = async (newUserOBJ) => {
 
   console.log('nodeUpdate id from newUserOBJ to PATCH id',id);
   // This will send a post request to update the data in the database.
-  await fetch(`http://159.89.47.38:5050/record/${id}`, {
+  await fetch(`http://159.89.47.38:5051/record/${id}`, {
     method: "PATCH",
     body: JSON.stringify(rest),
     headers: {

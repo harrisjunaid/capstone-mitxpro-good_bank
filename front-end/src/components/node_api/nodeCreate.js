@@ -12,7 +12,7 @@ export const nodeCreate = async (name, email, password, balance) => {
     }
     console.log('newData', newData)
 
-    const response = await fetch(`http://159.89.47.38:5050/record`, {
+    const response = await fetch(`http://159.89.47.38:5051/record`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
