@@ -1,0 +1,136 @@
+openapi: 3.0.0
+info:
+  title: Good Bank
+  version: 1.0.0
+servers:
+  - url: http://159.89.47.38:5050
+tags:
+  - name: Record
+    description: Operations related to records
+paths:
+  /record:
+    post:
+      tags:
+        - Record
+      summary: Create a new record
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                balance:
+                  type: integer
+      responses:
+        '201':
+          description: Created
+        '200':
+          description: Success
+    get:
+      tags:
+        - Record
+      summary: Get all customer records
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  type: object
+                  properties:
+                    _id: 
+                      type: string
+                      example: 64c0154c46e0f48c1506ac7d
+                    name:
+                      type: string
+                      example: Anthony Demott
+                    email:
+                      type: string
+                      example: charchar@pokecenter.edu
+                    balance:
+                      type: integer
+                      example: 50
+
+  /record/{email}:
+    get:
+      tags:
+        - Record
+      summary: Get a record by email
+      parameters:
+        - name: email
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+
+  /record/{_id}:
+    patch:
+      tags:
+        - Record
+      summary:
+        Update a record by ID
+      parameters:
+        - name: _id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                balance:
+                  type: integer
+      responses:
+        '200':
+          description: OK                  
+    delete:
+      tags:
+        - Record
+      summary:
+        Delete a record by ID
+      parameters:
+        - name: _id
+          in: path
+          required: true
+          schema:
+            type: object
+            properties:
+              _id:
+                type: string
+              name:
+                type: string
+              email:
+                type: string
+              password:
+                type: string
+              balance:
+                type: integer
+      responses:
+        '204':
+          description: No Content
+
+
+
+

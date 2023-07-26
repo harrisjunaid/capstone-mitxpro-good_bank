@@ -1,7 +1,7 @@
 // official library to provide interface to communicate with MongoDB from Node.js
 import { MongoClient } from "mongodb";
 
-const uri = process.env.ATLAS_URI || "";
+const uri = process.env.ATLAS_URI || "mongodb+srv://MITxPRO:Capstone1@capstone-1.q2ixm2v.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 
 // connect to Mongo Atlas cluster
