@@ -1,12 +1,43 @@
 version: '3.4'
 
 services:
-  capstone_server_1:
-    image: goodbank_server:5051
+  goodbank_server:
+    image: goodbank_server:5051swagger
     build:
       context: .
       dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: production
+    # environment:
+    #   NODE_ENV: production
     ports:
       - 5051:5051
+
+  # goodbank_server:
+  #   build: .
+  #   container_name: goodbank_server
+
+  # swagger:
+  #   image: swaggerapi/swagger-ui
+  #   container_name: swagger
+  #   port:
+  #     - 8080:8080
+  #   volumes:
+  #     - ./swagger/swagger.yaml:/usr/share/nginx/html/swagger.yaml
+  #   restart: always
+  # nginx:
+  #   image: nginx:latest
+  #   container_name: goodbank_nginx
+  #   ports:
+  #     - 80:80
+      # - 81:5051
+    
+    # volumes:
+    #   - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    # depends_on:
+    #   - goodbank_server
+    #   - swagger
+    # links:
+    #   - goodbank_server
+    #   - swagger
+    # restart: always
+    # networks:
+    #   - goodbank_network

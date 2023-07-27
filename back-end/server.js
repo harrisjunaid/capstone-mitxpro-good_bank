@@ -1,13 +1,24 @@
 import express from "express";
 import cors from "cors";
 import "./loadEnvironment.mjs";
+import path from "path";
 import router from "./routes/record.js";
+import {fileURLToPath} from 'url';
+
 
 const PORT = process.env.PORT || 5051;
 const app = express();
 
+// Get the current file's path
+const __filename = fileURLToPath(import.meta.url);
+
+// Get the current directory's path
+const __dirname = path.dirname(__filename);
+
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'swagger')))
+// app.use(express.static('swagger'))
 
 app.use("/record", router);
 
