@@ -5,7 +5,7 @@ import {
   Register
  } from '../components'
 
-export const LandingPage = ({ userLogInSubmit, userRegisterSubmit }) => {
+export const LandingPage = ({ userLogInSubmit, userRegisterSubmit, setGoogleOAuthLogin }) => {
   // const { userLogInSubmit, userRegisterSubmit } = useContext(BankContext);
   // to toggle between login and register
   const [display, setDisplay] = useState('login');
@@ -16,7 +16,7 @@ export const LandingPage = ({ userLogInSubmit, userRegisterSubmit }) => {
   return (
     <div className="App">
       {
-        display === "login" ? <LogIn changeOption = { toggleDisplay } userLogInSubmit = {userLogInSubmit} /> : <Register changeOption = { toggleDisplay } userRegisterSubmit = {userRegisterSubmit} />
+        display === "login" ? <LogIn changeOption = { toggleDisplay } userLogInSubmit = {userLogInSubmit} setGoogleOAuthLogin={setGoogleOAuthLogin} /> : <Register changeOption = { toggleDisplay } userRegisterSubmit = {userRegisterSubmit} />
       }
     </div>
   );

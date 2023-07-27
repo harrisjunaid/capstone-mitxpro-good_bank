@@ -1,4 +1,4 @@
-import React, {  } from "react"
+import React, { useEffect } from "react"
 //icons
 import { HiOutlineMail } from "react-icons/hi"
 import { TbPassword } from "react-icons/tb"
@@ -12,14 +12,41 @@ import "./form.css"
 
 import { history } from '../components'
 
+import {useGoogleLogin} from '@react-oauth/google';
+import axios from "axios";
+import {AiFillGoogleCircle} from "react-icons/ai"
+
+
 /**
  * LogIn component calls userLogInSubmit() 
  * @param {*} param0 
  * @returns LogIn component
  */
-export const LogIn =  ({ changeOption, userLogInSubmit }) => {
-  // load data from user context
+export const LogIn =  ({ changeOption, userLogInSubmit, setGoogleOAuthLogin }) => {
   // const { userLogInSubmit } = useContext(BankContext);
+
+  const googleOAuthResult = useGoogleLogin({
+    onSuccess: async respose => {
+        try {
+            const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+                headers: {
+                    "Authorization": `Bearer ${respose.access_token}`
+                }
+            })
+            console.log(res.data, typeof(res.data))
+            const {name, email} = res.data
+            console.log(name, email) 
+            setGoogleOAuthLogin({name, email, password: "12345678", balace: 0})
+        } catch (err) {
+            console.log(err)
+        }
+    }
+});
+  // useEffect(() => {
+  //   if(!googleOAuthResult) alert ("Google OAuth failed")
+  //   console.log(googleOAuthResult.email)
+  //   setGoogleOAuthLogin(googleOAuthResult)
+  // }, [googleOAuthResult])
 
   const formikInitialValues = { //form initial data
     "name": "",
@@ -91,8 +118,11 @@ export const LogIn =  ({ changeOption, userLogInSubmit }) => {
                     <button  id="submit" type="button"  className="card-link btn btn-secondary mt-auto" disabled={!(formik.isValid && formik.dirty)} onClick={formik.handleSubmit}>Submit</button>
                     <button  id="reset" type="button" className="card-link btn btn-secondary mt-auto"  onClick={formik.handleReset} disabled={false}>Reset</button>
                   </div>
+                  <div className="btn-group gap-1 btn-group-vertical btn-group-lg " role="group" aria-label="Login Buttons">
+                  <button id="googleLogin" type="button" className="card-link btn btn-secondary mt-auto" onClick={googleOAuthResult}><AiFillGoogleCircle /> OAuth</button>
                   <button id="register" type="button" className="card-link btn btn-secondary mt-auto" onClick={() => changeOption('register')}>To Register Page</button>
-                </div>                
+                </div>   
+                </div>             
               </form>
             </div>  
           </div>

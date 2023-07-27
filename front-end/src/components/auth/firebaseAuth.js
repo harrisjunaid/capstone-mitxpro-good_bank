@@ -3,24 +3,25 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 // Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBwgK_FD4pIS6NiS5mZ3zsrwBiOgFW-ER4",
-//   authDomain: "mitxpro-capstone-1.firebaseapp.com",
-//   projectId: "mitxpro-capstone-1",
-//   storageBucket: "mitxpro-capstone-1.appspot.com",
-//   messagingSenderId: "899645395923",
-//   appId: "1:899645395923:web:11ecd5f519d48e6d57d526",
-//   measurementId: "G-NFJYQGS4MS"
-// };
 const firebaseConfig = {
-  apiKey: "AIzaSyDn3YVt67m42dryTHoCqHzscxV5xqdiGxY",
-  authDomain: "good-bank-5051.firebaseapp.com",
-  projectId: "good-bank-5051",
-  storageBucket: "good-bank-5051.appspot.com",
-  messagingSenderId: "387709040027",
-  appId: "1:387709040027:web:03211058ab645ceb11dd3e",
-  measurementId: "G-SKHQXPLKCK"
+  apiKey: "AIzaSyBwgK_FD4pIS6NiS5mZ3zsrwBiOgFW-ER4",
+  authDomain: "mitxpro-capstone-1.firebaseapp.com",
+  projectId: "mitxpro-capstone-1",
+  storageBucket: "mitxpro-capstone-1.appspot.com",
+  messagingSenderId: "899645395923",
+  appId: "1:899645395923:web:11ecd5f519d48e6d57d526",
+  measurementId: "G-NFJYQGS4MS"
 };
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDn3YVt67m42dryTHoCqHzscxV5xqdiGxY",
+//   authDomain: "good-bank-5051.firebaseapp.com",
+//   projectId: "good-bank-5051",
+//   storageBucket: "good-bank-5051.appspot.com",
+//   messagingSenderId: "387709040027",
+//   appId: "1:387709040027:web:03211058ab645ceb11dd3e",
+//   measurementId: "G-SKHQXPLKCK"
+// };
+
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
@@ -40,9 +41,26 @@ export const signUp = async (email, password) =>  {
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log('Sign up failed:', errorCode, errorMessage);
-    alert(`👾👾 ${errorMessage}`)
+    // alert(`👾👾 ${errorMessage}`)
   }
 }
+// check if user exists
+// export const googleSignupRequest = async (email, password) =>  {
+//   console.log('EXECUTED: googleSignupRequest() in firebaseAuth.js using auth.createUserWithEmailAndPassword(email, password)')
+//   try {
+//     const userCredential = await auth.createUserWithEmailAndPassword(email, password); // Wait for the promise to resolve
+//     const user = userCredential.user;
+//     console.log('Registered as:', user.email, 'from returned userCredential');
+//     // console.log(JSON.stringify(userCredential, null, 2))
+//     return userCredential;
+//   } catch (error) { // Handle any errors that may occur
+//     // Sign up failed
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     console.log('Sign up failed:', errorCode, errorMessage);
+//     // alert(`👾👾 ${errorMessage}`)
+//   }
+// }
 
 export const signIn = async (email, password) =>  {
   console.log('EXECUTED: signIn() in firebaseAuth.js')

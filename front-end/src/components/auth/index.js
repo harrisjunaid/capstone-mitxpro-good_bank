@@ -1,2 +1,2 @@
-export { ProtectedRoute } from './ProtectedRoute';
 export { useAuth } from './useAuth';
+export {useGoogleOAuth} from './useGoogleOAuth';

@@ -21,6 +21,9 @@ import {
 
 import { history } from '../../components';
 
+// import {useGoogleLogin} from '@react-oauth/google';
+// import axios from "axios"
+
 // context provider
 export const BankProvider = ({children}) => {
 	const [activeUserEmail, setActiveUserEmail] = useState(undefined);
@@ -28,6 +31,47 @@ export const BankProvider = ({children}) => {
   const [activeUser, setActiveUser] = useState(undefined);
   const [allRecords, setAllRecords] = useState([]);
   const adminEmail = process.env.ADMIN_EMAIL || 'admin@admin.com';
+  const [googleOAuthLogin, setGoogleOAuthLogin] = useState(false);
+
+  useEffect(() => {
+    if(!googleOAuthLogin) return
+    console.log('EXECUTED: useEffect() in BankProvider')
+    console.log(googleOAuthLogin)
+    userGoogleOAuthSubmit(googleOAuthLogin)
+    // alert(`User Created: ${JSON.stringify(googleOAuthLogin, null, 2)}`)
+
+  }, [googleOAuthLogin])
+
+  const userGoogleOAuthSubmit = async (values) => {
+    console.log('EXECUTED: userGoogleOAuthSubmit() in BankProvider')
+    console.log(values)
+    // try {
+      // check if the user exists in firebase
+      // if the user exist
+        // get details from mongo and login with details
+      // else create user in firebase and mongo
+        // firebase
+        const firebaseUser = await signUp(values?.email, values?.password);
+        console.log("FIREBASE USER from userGoogleOAuthSubmit", firebaseUser)
+        if(firebaseUser === (null ||  undefined)) {
+          console.log("FIREBASE USER EXIST⛑️⛑️")
+          const response = await nodeReadUserEmail(values?.email);
+          console.log(response)
+          setActiveUser(values)
+          setActiveUserEmail({email: values?.email})
+          return
+        }
+         // mongo
+        const resNodeCreate = await nodeCreate(values?.name, values?.email, values?.password, 0); // Wait for the second promise to resolve
+        alert(`User Created: ${JSON.stringify(values, null, 2)}`)
+        setActiveUser(values)
+        setActiveUserEmail({email: values?.email})
+      // } catch(error) {
+      //   console.log(error)
+      // }
+  }
+
+
 // get details of activeUser  and allRecords from mongo using activeUserEmail
 // ########################################
 // ## TO UPDATE "setActiveUserEmail useState" AS APP CONTEXT ##
@@ -53,6 +97,7 @@ export const BankProvider = ({children}) => {
       console.log(error)
     }
   }
+
 
 // ########################################
 /**
@@ -194,8 +239,8 @@ export const BankProvider = ({children}) => {
     try {
       // firebase
       const firebaseUser = await signUp(values?.email, values?.password);
+      if(firebaseUser === (null ||  undefined)) return alert("User Already Created") // check if the user is already registered
       console.log('userRegisterSubmit(): signUp() returned firebaseUser', firebaseUser)
-      if(firebaseUser === (null ||  undefined)) return false // check if the user is already registered
       // mongo
       const resNodeCreate = await nodeCreate(values?.name, values?.email, values?.password, 0); // Wait for the second promise to resolve
       // indicate success
@@ -275,7 +320,7 @@ export const BankProvider = ({children}) => {
   }
 // ########################################
 	return (
-			<BankContext.Provider value={{ activeUserEmail, roleAdmin, activeUser, allRecords ,setActiveUserEmail, getUserDetails, nodeRecords , userLogInSubmit, transactionExecute, userLogOutSubmit, userRegisterSubmit, userDeleteSubmit, dataReloadSubmit, transferExecute, userEditSubmit}}>
+			<BankContext.Provider value={{ activeUserEmail, roleAdmin, activeUser, allRecords ,setActiveUserEmail, getUserDetails, nodeRecords , userLogInSubmit, transactionExecute, userLogOutSubmit, userRegisterSubmit, userDeleteSubmit, dataReloadSubmit, transferExecute, userEditSubmit, setGoogleOAuthLogin}}>
 					{children}
 			</BankContext.Provider>
 	)

@@ -46,13 +46,13 @@ const CustomRouter = ({ history, ...props }) => {
 };
 
 function App() {
-  const { activeUserEmail, roleAdmin, activeUser, allRecords, dataReloadSubmit, getUserDetails, nodeRecords , userLogInSubmit, transactionExecute, userLogOutSubmit, userRegisterSubmit, userDeleteSubmit, transferExecute, userEditSubmit} = useContext(BankContext);
-  // const { setActiveUserEmail} = useContext(BankContext);
+  const { activeUserEmail, roleAdmin, activeUser, allRecords, dataReloadSubmit, getUserDetails, userLogInSubmit, transactionExecute, userLogOutSubmit, userRegisterSubmit, userDeleteSubmit, transferExecute, userEditSubmit, setGoogleOAuthLogin} = useContext(BankContext);
+  // const { setActiveUserEmail, nodeRecords} = useContext(BankContext);
 
   return ( 
     <>
       {
-        !(activeUserEmail) ? <LandingPage userLogInSubmit={userLogInSubmit} userRegisterSubmit={userRegisterSubmit}/> : 
+        !(activeUserEmail) ? <LandingPage userLogInSubmit={userLogInSubmit} userRegisterSubmit={userRegisterSubmit} setGoogleOAuthLogin={setGoogleOAuthLogin} /> : 
           <CustomRouter history={history}>
             <div className="App">
               <NavBar activeUserEmail={activeUserEmail.email} roleAdmin={roleAdmin} dataReloadSubmit={dataReloadSubmit} />

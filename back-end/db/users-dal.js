@@ -4,7 +4,7 @@ import db from "./conn.js";
 class UsersDAL {
   constructor() {
     this.db = db
-    this.collection = this.db.collection("new-records");
+    this.collection = this.db.collection("records");// records new-records
   }
 
   // Create a new user document
