@@ -6,3 +6,4 @@ export { NotFoundPage } from './NotFoundPage';
 export { WelcomePage } from './WelcomePage';
 export { WithdrawPage } from './WithdrawPage';
 export { TransferPage } from './TransferPage';
+export { Swagger } from './SwaggerUI';

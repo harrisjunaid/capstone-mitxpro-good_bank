@@ -12,7 +12,8 @@ import {
   WithdrawPage,
   AllDataPage,
   NotFoundPage,
-  TransferPage
+  TransferPage,
+  Swagger
  } from './pages';
 // COMPONENTS
 import {
@@ -61,6 +62,7 @@ function App() {
                   <Route path="/deposit"  element={<DepositPage       activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} userLogOutSubmit={userLogOutSubmit} transactionExecute={transactionExecute} />} />
                   <Route path="/withdraw" element={<WithdrawPage      activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} userLogOutSubmit={userLogOutSubmit} transactionExecute={transactionExecute}  />} />
                   <Route path="/transfer" element={<TransferPage      activeUserEmail={activeUserEmail} activeUser={activeUser} getUserDetails={getUserDetails} userLogOutSubmit={userLogOutSubmit} transferExecute={transferExecute}  />} />
+                  <Route path="/swaggerUI"element={<Swagger />} />
                   <Route path="/create"   element={<CreateAccountPage userRegisterSubmit={userRegisterSubmit} />} />
                   <Route path="/all"      element={<AllDataPage       allRecords={allRecords} dataReloadSubmit={dataReloadSubmit} userDeleteSubmit={userDeleteSubmit} userEditSubmit={userEditSubmit} />} />
                   {/* <Route path="/edit/:id" element={<Edit />} /> */}

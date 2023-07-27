@@ -7,7 +7,7 @@ import { MdOutlineAccountBox } from "react-icons/md"
 import { GiTakeMyMoney, GiPayMoney } from "react-icons/gi"
 import { CiMoneyCheck1 } from "react-icons/ci"
 import { BiData } from "react-icons/bi"
-// logo.png
+import { SiSwagger } from "react-icons/si"
 import logo from "../assets/img/bank-logo.png"
 // css
 import './NavBar.css';
@@ -40,6 +40,7 @@ export const NavBar = ({activeUserEmail, roleAdmin, dataReloadSubmit }) => {
           { !roleAdmin  ? <li><NavLink to="/deposit" className={getClass}><i aria-hidden="true"><GiPayMoney /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Deposit Funds">Deposit</span></NavLink></li> : null }
           { !roleAdmin  ? <li><NavLink to="/withdraw" className={getClass}><i aria-hidden="true"><GiTakeMyMoney /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Make A Withdrawal">Withdraw</span></NavLink></li> : null }
           { !roleAdmin  ? <li><NavLink to="/transfer" className={getClass}><i aria-hidden="true"><CiMoneyCheck1 /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Deposit Funds">Transfer</span></NavLink></li> : null }
+          {  roleAdmin  ? <li><NavLink to="/swaggerUI" className={getClass}><i aria-hidden="true"><SiSwagger  /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Set-Up An Account">Swagger UI</span></NavLink></li> : null }
           {  roleAdmin  ? <li><NavLink to="/create" className={getClass}><i aria-hidden="true"><MdOutlineAccountBox  /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Set-Up An Account">Create Account</span></NavLink></li> : null }
           {  roleAdmin  ? <li className="pe-5" onClick={()=>{dataReloadSubmit()}}><NavLink to="/all" className={getClass}><i aria-hidden="true"><BiData /></i> <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bank Records">All Data</span></NavLink></li> : null }
           {/* display activeUserEmail */}
