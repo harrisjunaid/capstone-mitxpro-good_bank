@@ -1,14 +1,24 @@
-import db from "./conn.js";
+import _db from "./conn.js";
 
-//  class that handles CRUD operations for a records collection
+const _mongoCollUsersDAL: string = process.env._mongoCollUsersDAL ||"records"
+
 class UsersDAL {
+  private _db: any;
+  private _collection: any;
+
+  get db() {
+    return this._db;
+  }
+  get collection() {
+    return this._collection;
+  }    
   constructor() {
-    this.db = db
-    this.collection = this.db.collection("records");// records new-records
+    this._db = _db
+    this._collection = this._db.collection( _mongoCollUsersDAL);// records new-records
   }
 
   // Create a new user document
-  async createUser(user) {
+  async createUser(user: object) {
     console.log("POSTING:  from / collection.insertOne(user)", JSON.stringify(user), "in request")
     const result = await this.collection.insertOne(user);
     return result;
@@ -43,8 +53,8 @@ class UsersDAL {
   }
 }
 
-const usersDAL = new UsersDAL()
+// const usersDal: UsersDAL = new UsersDAL();
 // database object from data access class UsersDAL
 // can be used in routes, controllers, or middleware functions
-export default usersDAL
+export default UsersDAL;
 

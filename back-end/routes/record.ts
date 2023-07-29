@@ -1,20 +1,23 @@
-import express from "express";
+import { Request, Response, Router } from 'express';
 // data access class 
-import  usersDal from "../db/users-dal.js";
+import  UsersDAL from "../db/users-dal.js";
 // ObjectId is a class that takes a string and returns an object that mongodb understands
 import { ObjectId } from "mongodb";
 
-const router = express.Router();
+const usersDal: UsersDAL = new UsersDAL();
+
+const router: Router = Router();
 //  *********** CRUD ***********
+interface User {
+  name: string;
+  email: string;
+  password: string;
+  balance: number;
+}
 // create a new record.
-router.post("/", async (req, res) => {
+router.post("/", async (req: Request, res: Response, next) => {
   console.log("POSTING:  from / collection.insertOne(user)", JSON.stringify(req.body), "in request")
-  let user = {
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-    balance: req.body.balance,
-  };
+  let user: User = { ...req.body  };
   try {
     let result = await usersDal.createUser(user);
     res.send(result).status(200); // 
@@ -24,12 +27,12 @@ router.post("/", async (req, res) => {
   }
 });
 // list of all the records.
-router.get("/", async (req, res) => {
+router.get("/", async (req: Request, res: Response, next) => {
   let results = await usersDal.readAllUsers();
   res.send(results).status(200);
 });
 // get a single record by email
-router.get("/:email", async (req, res) => {
+router.get("/:email", async (req: Request, res: Response, next) => {
   let query = {email: req.params.email};
   let result = await usersDal.findUserByEmail(query);
 
@@ -41,9 +44,9 @@ router.get("/:email", async (req, res) => {
   }
 });
 // update a record by id.
-router.patch("/:id", async (req, res) => {
+router.patch("/:id", async (req: Request, res: Response, next) => {
   const query = { _id: new ObjectId(req.params.id) };
-  const update =  {
+  const update: object =  {
     $set: {
       name: req.body.name,
       email: req.body.email,
@@ -57,7 +60,7 @@ router.patch("/:id", async (req, res) => {
   res.send(result).status(200);
 });
 // delete a record
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async (req: Request, res: Response, next) => {
   const query = { _id: new ObjectId(req.params.id) }; // MONGO QUERY
   let result = await usersDal.deleteUserById(query); // MONGO RESULT
   if (!result) res.send("Not found").status(404);

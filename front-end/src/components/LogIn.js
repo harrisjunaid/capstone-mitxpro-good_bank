@@ -25,6 +25,7 @@ import {AiFillGoogleCircle} from "react-icons/ai"
 export const LogIn =  ({ changeOption, userLogInSubmit, setGoogleOAuthLogin }) => {
   // const { userLogInSubmit } = useContext(BankContext);
 
+  // inderts values in setGoogleOAuthLogin
   const googleOAuthResult = useGoogleLogin({
     onSuccess: async respose => {
         try {
@@ -42,11 +43,7 @@ export const LogIn =  ({ changeOption, userLogInSubmit, setGoogleOAuthLogin }) =
         }
     }
 });
-  // useEffect(() => {
-  //   if(!googleOAuthResult) alert ("Google OAuth failed")
-  //   console.log(googleOAuthResult.email)
-  //   setGoogleOAuthLogin(googleOAuthResult)
-  // }, [googleOAuthResult])
+
 
   const formikInitialValues = { //form initial data
     "name": "",

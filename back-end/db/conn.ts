@@ -1,17 +1,26 @@
 // official library to provide interface to communicate with MongoDB from Node.js
-import { MongoClient } from "mongodb";
+import { MongoClient, Db } from "mongodb";
 
-const uri = process.env.ATLAS_URI || "mongodb+srv://MITxPRO:Capstone1@capstone-1.q2ixm2v.mongodb.net/?retryWrites=true&w=majority";
+// get the URI of the database from the environment variables
+type URI = string | undefined;
+const uri: URI = process.env.ATLAS_URI || undefined;
+if (uri === undefined) {
+  throw new Error('Failed to get MongoDB URI from environment variable');
+}
 const client = new MongoClient(uri);
 
 // connect to Mongo Atlas cluster
-let conn;
+let conn: MongoClient | undefined;
 try {
   conn = await client.connect();
 } catch(e) {
   console.error(e);
 }
-let db = conn.db("good_bank");
+
+if (conn === undefined) {
+  throw new Error('Failed to connect to MongoDB client: conn is undefined');
+}
+let db: Db = conn.db("good_bank");
 // database object
 // to access the database and its collections
 export default db;
