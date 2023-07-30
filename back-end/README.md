@@ -36,3 +36,9 @@ services:
       NODE_ENV: production
     ports:
       - 5051:5051
+
+"scripts": {
+  "start": "tsc -p . && node server.js"
+}
+
+nodemon --exec "npm start"
